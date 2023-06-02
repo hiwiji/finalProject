@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>john Computer</title>
+</head>
+<body>
+  <section>
+    <!-- <h3>글자 되돌리기</h3> -->
+    <p id="example1"></p>
+    <!-- <h3>글자 타이핑</h3>
+    <p id="example2"></p> -->
+  </section>
+  <script src="/typeit.min.js"></script>
+  <script>
+    new TypeIt("#example1", {
+        speed: 200,
+        waitUntilVisible: true,
+        loop: false
+      })
+      .type("쉽고 간단한") // 타이핑
+      .pause(500) // 멈춤
+      .delete(-3)
+      .move(+2) // 이동(글자수)
+      .pause(500)
+      .type("간편한 TOTAL 협업툴")
+      .break({ delay: 500 })
+      // .pause(1000)
+      .move(4)
+      .delete(3) // 지우기
+      // .pause(1)
+      .type("TURTLE")
+      // .pause(1000)
+      // .move(1)
+      .go(); // 실행
+
+    new TypeIt("#example2", {
+      strings: ["John Computer.", "여행을 좋아하는 개발자 블로그."],
+      speed: 50,
+    }).go();
+    // go 시작 / String (,)콤마 줄바꿈
+  </script>
+</body>
+</html>
