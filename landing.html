@@ -40,12 +40,19 @@
          <img src="/assets/img/logo/turtleLogo-green.png" alt="로고안보임">
         <span>TURTLE</span>
       </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
   
       <nav id="navbar" class="navbar container-fluid">
         <ul class="nav">
           <li><a class="justify-content-start" href="#">제품</a></li>
-          <li><a class="justify-content" href="/pricing.html">요금</a></li>
-          <li><a class="justify-content" href="/customService.html">고객센터</a></li>
+          <li><a class="justify-content" href="/fee.html">요금</a></li>
+          <li><a class="justify-content" href="/faq.html">고객센터</a></li>
         </ul>
       
         <ul class="nav justify-content-end">
@@ -62,7 +69,7 @@
   <!-- ======= 랜딩 첫페이지 Hero Section ======= -->
 
   <!-- 첫번째 페이지 total 협업툴 -->
-  <i class="bi bi-list mobile-nav-toggle"></i>
+  <i class="mobile-nav-toggle"></i>
   
   <section id="hero" class="hero d-flex align-items-center">
 
@@ -190,246 +197,235 @@
     
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
-
       <div class="container" data-aos="fade-up">
+
 
         <header class="section-header">
           <p>내가 만들고 싶은대로 커스텀 프로젝트 관리</p>
           <h2>해당 기능에 대한 홍보 문구 </h2>
         </header>
+  
 
-        <ul class="nav nav-tabs row gy-4 d-flex">
-
-          <li class="nav-item col-6 col-md-3 col-lg-3">
+        <!-- 탭메뉴 -->
+        <ul class="nav row gy-4 d-flex">
+          <!-- col-lg-3이 tab 자리수임 -->
+          <li class="nav-item col-6 col-md-4 col-lg-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
               <h4>워크스페이스</h4>
             </a>
           </li>
           <!-- End Tab 1 Nav -->
-
-          <li class="nav-item col-6 col-md-3 col-lg-3">
+            
+          <li class="nav-item col-6 col-md-4 col-lg-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
               <h4>실시간 채팅</h4>
             </a>
           </li>
           <!-- End Tab 2 Nav -->
-
-          <li class="nav-item col-6 col-md-3 col-lg-3">
+  
+          <li class="nav-item col-6 col-md-4 col-lg-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
               <h4>실시간 알림</h4>
             </a>
           </li>
           <!-- End Tab 3 Nav -->
-
-          <li class="nav-item col-6 col-md-3 col-lg-3">
+  
+          <li class="nav-item col-6 col-md-4 col-lg-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
               <h4>멤버 관리</h4>
             </a>
           </li>
           <!-- End Tab 4 Nav -->
         </ul>
-
-
+  
+        <!-- 탭메뉴에 대한 설명 -->
+        <div class="tab-content">
           
-
-
-        <!-- <div class="row hihi"> -->
-           <div class="col-lg-6 video-wrap">
-              <video autoplay="" loop="" muted="" class="custom-video" poster="" width="90%">
-                  <source src="/video/pexels-2022395.mp4" type="video/mp4">
-          </div> 
-            <!-- <img src="assets/img/features.png" class="img-fluid" alt=""> -->
+          <!-- 1번 -->
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row gy-4">
+              <!-- 왼쪽특징 -->
+              <div class="col-lg-7 video-wrap">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="" width="90%">
+                  <source src="/assets/video/pexels-2022395.mp4" type="video/mp4">
+              </div>
+              
+              <!-- 가운데공백 -->
+              <div class="col-lg-1"></div>
+                
+              <!-- 오른쪽특징 -->
+              <div class="col-lg-4 mt-5 mt-lg-0 d-flex">
+                <div class="row align-self-center gy-4">
+                  
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="200">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>워크스페이스 기능에 대한 특징1</h3>
+                    </div>
+                  </div>
       
-
-          <!-- 사이 공백 -->
-          <div class="col-lg-1"></div>
-          
-
-          <div class="col-lg-4 mt-5 mt-lg-0 d-flex">
-            <div class="row align-self-center gy-4">
-
-              <div class="row-md-4" data-aos="zoom-out" data-aos-delay="200">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>왼쪽 기능에 대한 특징1</h3>
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="300">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>워크스페이스  기능에 대한 특징2</h3>
+                    </div>
+                  </div>
+      
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="400">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>워크스페이스 기능에 대한 특징3</h3>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div class="row-md-4" data-aos="zoom-out" data-aos-delay="300">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>왼쪽 기능에 대한 특징2</h3>
-                </div>
-              </div>
-
-              <div class="row-md-4" data-aos="zoom-out" data-aos-delay="400">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>왼쪽 기능에 대한 특징3</h3>
-                </div>
-              </div>
             </div>
           </div>
+          <!-- End Tab Content 1 -->
 
-        </div>
-        <!-- / row -->
+          
+          <!-- 2번 -->
+          <div class="tab-pane" id="tab-2">
+            <div class="row gy-4">
+              <!-- 왼쪽특징 -->
+              <div class="col-lg-7 video-wrap">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="" width="90%">
+                  <source src="/assets/video/pexels-2022395.mp4" type="video/mp4">
+              </div> 
 
-      </div>
+              <!-- 가운데공백 -->
+              <div class="col-lg-1"></div>
 
-    </section>
-    <!-- End Features Section -->
+              <!-- 오른쪽특징 -->
+              <div class="col-lg-4 mt-5 mt-lg-0 d-flex">
+                <div class="row align-self-center gy-4">
+                  
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="200">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>실시간 채팅 기능에 대한 특징1</h3>
+                    </div>
+                  </div>
+      
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="300">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>실시간 채팅 기능에 대한 특징2</h3>
+                    </div>
+                  </div>
+      
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="400">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>실시간 채팅 기능에 대한 특징3</h3>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
 
-
-       <!-- ======= Features Section ======= -->
-       <section id="features" class="features">
-        <div class="container" data-aos="fade-up">
+            </div>
+          </div>       
+          <!-- End Tab Content 2 -->
   
-          <ul class="nav nav-tabs row gy-4 d-flex">
-            <!-- col-lg-3이 tab 자리수임 -->
-            <li class="nav-item col-6 col-md-4 col-lg-3">
-              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-                <i class="bi bi-binoculars color-cyan"></i>
-                <h4>워크스페이스</h4>
-              </a>
-            </li>
-            <!-- End Tab 1 Nav -->
+
+          <!-- 3번 -->
+          <div class="tab-pane" id="tab-3">
+            <div class="row gy-4">
+              <!-- 왼쪽특징 -->
+              <div class="col-lg-7 video-wrap">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="" width="90%">
+                  <source src="/assets/video/pexels-2022395.mp4" type="video/mp4">
+              </div>
+
+              <!-- 가운데공백 -->
+              <div class="col-lg-1"></div>
+
+              <!-- 오른쪽특징 -->
+              <div class="col-lg-4 mt-5 mt-lg-0 d-flex">
+                <div class="row align-self-center gy-4">
+                  
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="200">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>실시간 알람 기능에 대한 특징1</h3>
+                    </div>
+                  </div>
+      
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="300">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>실시간 알람 기능에 대한 특징2</h3>
+                    </div>
+                  </div>
+      
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="400">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>실시간 알람 기능에 대한 특징3</h3>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+              
             
-            <li class="nav-item col-6 col-md-4 col-lg-3">
-              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                <i class="bi bi-box-seam color-indigo"></i>
-                <h4>실시간 채팅</h4>
-              </a>
-            </li>
-            <!-- End Tab 2 Nav -->
-  
-            <li class="nav-item col-6 col-md-4 col-lg-3">
-              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                <i class="bi bi-brightness-high color-teal"></i>
-                <h4>실시간 알림</h4>
-              </a>
-            </li>
-            <!-- End Tab 3 Nav -->
-  
-            <li class="nav-item col-6 col-md-4 col-lg-3">
-              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                <i class="bi bi-command color-red"></i>
-                <h4>멤버 관리</h4>
-              </a>
-            </li>
-            <!-- End Tab 4 Nav -->
-          </ul>
-  
-          <div class="tab-content">
-  
-            <div class="tab-pane active show" id="tab-1">
-              <div class="row gy-4">
-                <!-- 왼쪽특징 -->
-                <div class="col-lg-6 video-wrap">
-                  <video autoplay="" loop="" muted="" class="custom-video" poster="" width="90%">
-                      <source src="/video/pexels-2022395.mp4" type="video/mp4">
-                </div> 
-                
-                <!-- 오른쪽특징 -->
-                <div class="col-lg-4 mt-5 mt-lg-0 d-flex">
-                  <div class="row align-self-center gy-4">
-                    <!-- 1번 -->
-                    <div class="row-md-4" data-aos="zoom-out" data-aos-delay="200">
-                      <div class="feature-box d-flex align-items-center">
-                        <i class="bi bi-check"></i>
-                        <h3>워크스페이스 기능에 대한 특징1</h3>
-                      </div>
-                    </div>
-      
-                    <div class="row-md-4" data-aos="zoom-out" data-aos-delay="300">
-                      <div class="feature-box d-flex align-items-center">
-                        <i class="bi bi-check"></i>
-                        <h3>워크스페이스  기능에 대한 특징2</h3>
-                      </div>
-                    </div>
-      
-                    <div class="row-md-4" data-aos="zoom-out" data-aos-delay="400">
-                      <div class="feature-box d-flex align-items-center">
-                        <i class="bi bi-check"></i>
-                        <h3>워크스페이스 기능에 대한 특징3</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
             </div>
-            <!-- End Tab Content 1 -->
-  
-            <div class="tab-pane" id="tab-2">
-              <div class="row gy-4">
-                <!-- 왼쪽특징 -->
-                <div class="col-lg-6 video-wrap">
-                  <video autoplay="" loop="" muted="" class="custom-video" poster="" width="90%">
-                      <source src="/video/pexels-2022395.mp4" type="video/mp4">
-                </div> 
-
-                <!-- 오른쪽특징 -->
-                <div class="col-lg-4 mt-5 mt-lg-0 d-flex">
-                  <div class="row align-self-center gy-4">
-                    <!-- 1번 -->
-                    <div class="row-md-4" data-aos="zoom-out" data-aos-delay="200">
-                      <div class="feature-box d-flex align-items-center">
-                        <i class="bi bi-check"></i>
-                        <h3>실시간 채팅 기능에 대한 특징1</h3>
-                      </div>
-                    </div>
-      
-                    <div class="row-md-4" data-aos="zoom-out" data-aos-delay="300">
-                      <div class="feature-box d-flex align-items-center">
-                        <i class="bi bi-check"></i>
-                        <h3>실시간 채팅 기능에 대한 특징2</h3>
-                      </div>
-                    </div>
-      
-                    <div class="row-md-4" data-aos="zoom-out" data-aos-delay="400">
-                      <div class="feature-box d-flex align-items-center">
-                        <i class="bi bi-check"></i>
-                        <h3>실시간 채팅 기능에 대한 특징3</h3>
-                      </div>
-                    </div>
-                
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <!-- End Tab Content 2 -->
-  
-            <div class="tab-pane" id="tab-3">
-              <div class="row gy-4">
-                <div class="col-lg-8 order-2 order-lg-1">
-                  <h3>실시간 알림설명란</h3>
-                </div>
-
-                <div class="col-lg-4 order-1 order-lg-2 text-center">
-                  <img src="assets/img/features-3.svg" alt="" class="img-fluid">
-                </div>
-              </div>
-            </div>
-            <!-- End Tab Content 3 -->
-  
-            <div class="tab-pane" id="tab-4">
-              <div class="row gy-4">
-                <div class="col-lg-8 order-2 order-lg-1">
-                  <h3>멤버 관리 설명란</h3>
-                </div>
-
-                <div class="col-lg-4 order-1 order-lg-2 text-center">
-                  <img src="assets/img/features-4.svg" alt="" class="img-fluid">
-                </div>
-              </div>
-            </div>
-            <!-- End Tab Content 4 -->
-  
-  
           </div>
+          <!-- End Tab Content 3 -->
+  
+
+          <!-- 4번 -->
+          <div class="tab-pane" id="tab-4">
+            <div class="row gy-4">
+              <!-- 왼쪽 특징 -->
+              <div class="col-lg-7 video-wrap">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="" width="90%">
+                  <source src="/assets/video/pexels-2022395.mp4" type="video/mp4">
+              </div>
+
+              <!-- 가운데공백 -->
+              <div class="col-lg-1"></div>
+
+              <!-- 오른쪽특징 -->
+              <div class="col-lg-4 mt-5 mt-lg-0 d-flex">
+                <div class="row align-self-center gy-4">
+                
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="200">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>멤버관리에 대한 특징1</h3>
+                    </div>
+                  </div>
+      
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="300">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>멤버관리에 대한 특징2</h3>
+                    </div>
+                  </div>
+      
+                  <div class="row-md-4" data-aos="zoom-out" data-aos-delay="400">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>멤버관리에 대한 특징3</h3>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+            
+
+
+            </div>
+          </div>
+          <!-- End Tab Content 4 -->
   
         </div>
-      </section><!-- End Features Section -->
+        <!-- 탭설명 끝  -->
+      </section>
+      <!-- End Features Section -->
 
 
   
@@ -507,7 +503,7 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
-            <a href="/landingPage.html" class="logo align-items-center">
+            <a href="/html/landing.html" class="logo align-items-center">
               <img src="/assets/img/logo/turtleLogo.png" alt="안보여요">
               <span>TURTLE</span>
             </a>
@@ -540,36 +536,8 @@
     <!-- <i class="bi bi-arrow-up-short"></i> -->
   </a>
 
-  <!-- 랜딩 타이핑효과 js -->
-  <script src="/assets/js/typeit.min.js"></script>
-  <script>
-    new TypeIt("#example1", {
-        speed: 150,
-        waitUntilVisible: true,
-        loop: false
-      })
-      .type("쉽고 간단한") // 타이핑
-      .pause(500) // 멈춤
-      .delete(-3)
-      .move(+2) // 이동(글자수)
-      .pause(500)
-      .type("간편한 TOTAL 협업툴")
-      .break({ delay: 500 })
-      .move(4)
-      .delete(3) // 지우기
-      .type('<font color="#3D8361">TURTLE')
-      .go(); // 실행
-  </script>
+  
 
-<!-- <script>
-  new TypeIt("#example2", {
-      speed: 200,
-      waitUntilVisible: true,
-      loop: false
-    })
-    .type("TURTLE") // 타이핑
-    .go(); // 실행
-</script> -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -580,9 +548,12 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <!-- 랜딩 타이핑효과 js (랜딩js보다 위에 있어야함) -->
+  <script src="/assets/js/typeit.min.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/landingPage.js"></script>
+  <!-- 랜딩 js -->
+  <script src="/assets/js/landing.js"></script>
+  
 
 </body>
 
