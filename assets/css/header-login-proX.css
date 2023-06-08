@@ -160,12 +160,16 @@ a:hover {
   font-weight: bold;
 }
 
+/* .nav-links li:hover {
+  background-color: #a1b8be;
+  transition: 500ms;
+} */
 
 .nav-links2 {
   padding-left: 0px;
   display: flex;
   list-style: none;
-  flex-basis:26%;
+  flex-basis:28%;
 }
 
 .nav-links2 li {
@@ -176,8 +180,9 @@ a:hover {
 }
 
 .nav-links2 a:hover {
+  
   /* color: #a1b8be; */
-  transition: 50ms;
+  /* transition: 50ms; */
 }
 
 .nav-btn {
@@ -188,7 +193,6 @@ a:hover {
   color: #fff;
   background: #a1b8be;;
 }
-
 
 .bar {
   display: none;
@@ -221,8 +225,8 @@ a:hover {
     display: flex;
     list-style: none;
     flex-basis: 60%;
-    /* background-attachment: fixed; */
     font-size: 14px;
+    /* transition: 100ms; */
   }
 }
 

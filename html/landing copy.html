@@ -8,7 +8,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   
-  <title>landing</title>
+  <title>landing copy</title>
 
   <!-- Favicons -->
   <link href="/assets/favicon/favicon-16x16.png" rel="icon">
@@ -34,39 +34,46 @@
   <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- CSS File -->
-  <link href="/assets/css/landing-style.css" rel="stylesheet">
+  <link href="/assets/css/landing-style copy.css" rel="stylesheet">
 </head>
 
 <body>
-
-  <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
-    <div class="container-fluid d-flex container justify-content-between">
-
-      <a href="#" class="logo d-flex align-items-center">
-         <img src="/assets/img/logo/turtleLogo-green.png" alt="로고안보임">
-        <span>TURTLE</span>
-      </a>
-      
-  
+    <div id="allnav" class="container-fluid d-flex container justify-content-between">
       <nav id="navbar" class="navbar container-fluid">
-        <ul class="nav">
-          <li><a class="justify-content-start" href="/html/landing.html">제품</a></li>
-          <li><a class="justify-content" href="/html/fee.html">요금</a></li>
-          <li><a class="justify-content" href="/html/faq.html">고객센터</a></li>
-        </ul>
+          <!-- <div class="logo-wrapper">
+              <a class="logo"><img src="/assets/img/logo/turtleLogo-green.png"></a>
+              <span>TURTLE</span>
+          </div> -->
+
+          <a href="/html/landing.html" class="logo d-flex">
+            <img src="/assets/img/logo/turtleLogo-green.png" alt="로고안보임">
+           <span>TURTLE</span>
+         </a>
+
+        
+
+          <ul class="nav-links">
+              <li><a href="/html/landing.html">소개</a></li>
+              <li><a href="/html/fee.html">요금제</a></li>
+              <li><a href="/html/faq.html">고객센터</a></li>
+          </ul>
+          
+
+
+          <ul class="nav-links2">
+              <li><a href="#">로그인</a></li> 
+              <li><a href="#" class="nav-btn">무료로 사용하기</a></li> 
+          </ul>
       
-        <ul class="nav justify-content-end">
-          <li><a class="nav-link scrollto" href="#">로그인</a></li>
-          <li><a class="getstarted scrollto" href="#">무료체험</a></li>
-        </ul>  
-      </nav>
-      <!-- .navbar -->
+          <a href="#" class="bar">
+              <i class="fa-solid fa-bars"></i>
+          </a>
+        </nav>
+      </div>
+    </header>
 
-    </div>
 
-  
-  </header>
 
   <!-- <i class="mobile-nav-toggle"></i> -->
   <!-- End Header -->
@@ -469,19 +476,11 @@
     </section>
     <!-- End Recent Blog Posts Section -->
 
-    
-
-  </main>
-  <!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="footer-newsletter">
+    <!-- ======= 업무의 효율을 높여보세요 ======= -->
+    <section class="newsletter">
       <div class="container">
         <div class="justify-content-center">
           
-
           <div class="col-lg-12 text-center">
             <h4>Turtle과 함께 업무 효율성을 높여보세요</h4>
 
@@ -493,24 +492,25 @@
                 </a>
               </div>
             </div>
-          
           </div>
-          <!--<div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>-->
+
         </div>
       </div>
-    </div>
+    </section>
 
+
+  </main>
+  <!-- End #main -->
+
+
+  <footer id="footer" class="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="/html/landing.html" class="logo align-items-center">
+          <div class="col-md-12 footer-info">
+            <a href="#" class="logo align-items-center">
               <img src="/assets/img/logo/turtleLogo.png" alt="안보여요">
-              <span>TURTLE</span>
+              <div class="footerLogo">TURTLE</div>
             </a>
       
             <div class="footer-info">
@@ -525,7 +525,7 @@
             <div class="copyright">
               <a href="#"><span><b>이용약관</b></span></a>&nbsp;&nbsp;&nbsp;
               <a href="#"><span><b>개인정보처리방침</b></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &copy; Copyright <strong><span>TURTLE</span></strong>. All Rights Reserved
+              &copy; Copyright <strong>TURTLE</strong>. All Rights Reserved
             </div>
 
           </div>
@@ -535,9 +535,12 @@
   </footer>
   <!-- End Footer -->
 
+
+
+
   <!-- top버튼 -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-    <img src="assets/img/turtle (1).png" alt="거북이" width="50px" >
+    <img src="/assets/img/turtle (1).png" alt="거북이" width="50px" >
     <!-- <i class="bi bi-arrow-up-short"></i> -->
   </a>
 
