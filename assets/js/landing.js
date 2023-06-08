@@ -1,4 +1,20 @@
 
+const bar = document.querySelector('.bar');
+const menu = document.querySelector('.nav-links');
+const icons = document.querySelector('.nav-links2');
+
+
+/*반응형 햄버거 클릭시 nav바 내려오기*/
+
+bar.addEventListener('click', ()=> {
+  menu.classList.toggle('active');
+  icons.classList.toggle('active');
+  
+});
+
+
+
+
 (function() {
   "use strict";
 
