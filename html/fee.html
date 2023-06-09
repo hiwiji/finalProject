@@ -11,8 +11,8 @@
   <title>fee</title>
 
   <!-- Favicons -->
-  <link href="/assets/favicon/favicon-16x16.png" rel="icon">
-  <link href="/assets/favicon/apple-icon-60x60.png" rel="apple-touch-icon">
+  <link href="/resources/favicon/favicon-16x16.png" rel="icon">
+  <link href="/resources/favicon/apple-icon-60x60.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|
@@ -26,45 +26,53 @@
           integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
   <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/resources/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/resources/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/resources/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/resources/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/resources/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
 
   <!-- CSS File -->
-  <link href="/assets/css/fee-style.css" rel="stylesheet">
+  <link href="/resources/css/fee.css" rel="stylesheet">
+  <link href="/resources/css/header.css" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
-    <div class="container-fluid d-flex container justify-content-between">
-
-      <a href="/html/landing.html" class="logo d-flex align-items-center">
-        <img src="/assets/img/logo/turtleLogo-green.png" alt="로고안보임">
-       <span>TURTLE</span>
-      </a>
-
+    <div id="allnav" class="container-fluid d-flex container justify-content-between">
       <nav id="navbar" class="navbar container-fluid">
-        <ul class="nav">
-          <li><a class="justify-content-start" href="/html/landing.html">제품</a></li>
-          <li><a class="justify-content" href="/html/fee.html">요금</a></li>
-          <li><a class="justify-content" href="/html/faq.html">고객센터</a></li>
-        </ul>  
 
-        <ul class="nav justify-content-end">
-          <li><a class="nav-link scrollto" href="#">로그인</a></li>
-          <li><a class="getstarted scrollto" href="#">무료체험</a></li>
+        <a href="/html/landing.html" class="logo d-flex">
+          <img src="/resources/images/logo/turtleLogo-green.png" alt="로고안보임">
+          <span>TURTLE</span>
+        </a>
+
+        
+        <ul class="nav-links">
+            <li><a href="/html/landing.html">소개</a></li>
+            <li><a href="/html/fee.html">요금제</a></li>
+            <li><a href="/html/faq.html">고객센터</a></li>
         </ul>
-      </nav>
-      <!-- .navbar -->
+          
+        <ul class="nav-links2">
+            <li><a href="#">로그인</a></li> 
+            <li><a href="#" class="nav-btn">무료로 사용하기</a></li> 
+        </ul>
+        
 
+        <!-- 반응형시 보이는 햄버거버튼 -->
+        <a href="#" class="bar">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </nav>
     </div>
   </header>
-  <!-- End Header -->
+  <!-- ======= End Header ======= -->
+
 
 
 
@@ -94,7 +102,7 @@
             <div class="box">
               <h3 style="color: #07d5c0;">Free Plan</h3>
               <div class="price"><sup>$</sup>0<span> / mo</span></div>
-              <img src="/assets/img/pricing-free.png" class="img-fluid" alt="">
+              <img src="/reosurces/images/pricing-free.png" class="img-fluid" alt="">
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -111,7 +119,7 @@
               <span class="featured">Featured</span>
               <h3 style="color: #65c600;">Starter Plan</h3>
               <div class="price"><sup>$</sup>19<span> / mo</span></div>
-              <img src="/assets/img/pricing-starter.png" class="img-fluid" alt="">
+              <img src="/resources/images/pricing-starter.png" class="img-fluid" alt="">
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -127,7 +135,7 @@
             <div class="box">
               <h3 style="color: #ff0071;">Ultimate Plan</h3>
               <div class="price"><sup>$</sup>49<span> / mo</span></div>
-              <img src="/assets/img/pricing-ultimate.png" class="img-fluid" alt="">
+              <img src="/resources/images/pricing-ultimate.png" class="img-fluid" alt="">
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -156,16 +164,16 @@
    
 
   <!-- Vendor JS Files -->
-  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/resources/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/resources/vendor/aos/aos.js"></script>
+  <script src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/resources/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/resources/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/resources/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/resources/vendor/php-email-form/validate.js"></script>
 
- 
-  <script src="/assets/js/fee.js"></script>
+  <!-- 요금표 JS -->
+  <script src="/resources/js/fee.js"></script>
 
 
 </body>
