@@ -26,6 +26,11 @@ h6 {
 }
 
 
+.bi-list {
+  display:none;
+}
+
+
 
 /*--------------------------------------------------------------
 # Sections
@@ -78,10 +83,6 @@ section {
   height: 90px;
 }
 
-
-.bi-list {
-  display:none;
-}
 
 .gy-4 {
   margin: 0px 100px 100px 100px;
