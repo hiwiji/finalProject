@@ -40,23 +40,41 @@
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
-    <div id="allnav" class="container-fluid d-flex container justify-content-between">
+    <div id="allnav" class="container-fluid d-flex container justify-content-start">
       <nav id="navbar" class="navbar container-fluid">
 
+        <!-- 로고그림 및 이름 -->
         <a href="/html/landing.html" class="logo d-flex">
           <img src="/resources/images/logo/turtleLogo-green.png" alt="로고안보임">
           <span>TURTLE</span>
         </a>
 
-        
-
-        <ul class="nav-links">
+        <!-- 메뉴 -->
+        <ul class="nav-links justify-content-start">
           <li><a href="/html/landing.html">소개</a></li>
           <li><a href="/html/fee.html">요금제</a></li>
           <li><a href="/html/faq.html">고객센터</a></li>
         </ul>
-          
 
+        <!-- 자동로그인 테스트부분 (나중에 지울거임) -->
+        <div class="auto-login">
+          <form action="member/testLogin" method="POST">
+              <input type="hidden" name="memberEmail" value="test01@gmail.com">
+              <input type="hidden" name="memberPw" value="password999!">
+              <button>일일맨테스트로그인</button>
+            </form>
+            <form action="member/testLogin" method="POST">
+              <input type="hidden" name="memberEmail" value="user999@gmail.com">
+              <input type="hidden" name="memberPw" value="password999!">
+              <button>구구맨테스트로그인</button>
+            </form>
+            <form action="member/testLogin" method="POST">
+              <input type="hidden" name="memberEmail" value="deokk91@gmail.com">
+              <input type="hidden" name="memberPw" value="deokkeun!">
+              <button>emailTest</button>
+            </form>
+        </div>
+           
 
         <ul class="nav-links2">
           <li><a href="#">로그인</a></li> 
@@ -83,12 +101,9 @@
   <script src="/resources/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="/resources/vendor/php-email-form/validate.js"></script>
 
-  <!-- 랜딩 타이핑효과 js (랜딩js보다 위에 있어야함) -->
-  <script src="/resources/js/typeit.min.js"></script>
-
+  
   <!-- 랜딩 js -->
   <script src="/resources/js/landing.js"></script>
 
- 
 </body>
 </html>

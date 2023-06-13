@@ -1,4 +1,5 @@
 
+
 * {
   margin: 0;
   padding: 0;
@@ -9,16 +10,23 @@
   scroll-behavior: smooth;
 }
 
+/* 네비바 기본 글씨색 */
 body {
-  font-family: "Open Sans", sans-serif;
   color: #444444;
+}
+
+/* 폰트(프리텐다드) */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-
 
 .header {
   transition: all 0.5s;
@@ -35,14 +43,16 @@ body {
 
 
 /* 로고글씨 TURTLE */
-.header .logo span {
+.logo {
   font-size: 30px;
   font-weight: 700;
+  /* 글자사이 간격 */
   letter-spacing: 1px;
   color: #012970;
   font-family: "Nunito", sans-serif;
+  text-decoration: none;
   /* margin-top: 3px; */
-  margin-right: 30px;
+  /* margin-right: 30px; */
 }
 
 
@@ -58,17 +68,16 @@ nav > ul {
 
 
 /* 네비바 안에 a태그 */
-a {
+li > a {
   text-decoration: none;
   color: black;
   cursor: pointer;
 }
 
 /* 네비바 안에 a태그 호버시 */
-a:hover {
+ul a:hover {
   color:#317563;
 }
-
 
 
 /* 로고크기 */
@@ -78,13 +87,16 @@ a:hover {
 }
 
 
+/* 메뉴 */
 .nav-links {
   display: flex;
   list-style: none;
   padding-left: 0;
-  flex-basis: 70%;
+  margin-right: 100px;
+  /* flex-basis: 20%; */
   
 }
+
 .nav-links li {
   padding: 8px 12px;
   border-radius: 10px;
@@ -93,10 +105,10 @@ a:hover {
 
 
 .nav-links2 {
-  padding-left: 0px;
   display: flex;
+  padding-left: 0px;
   list-style: none;
-  flex-basis:26%;
+  /* flex-basis:26%; */
 }
 
 .nav-links2 li {
@@ -112,14 +124,14 @@ a:hover {
 
 
 
-/* 무료로 이용하기 버튼 설정 */
+/* 무료로 사용하기 버튼 설정 */
 .nav-btn {
   margin-top: 30px;
   line-height: 0;
   padding: 10px 15px;
   border-radius: 4px;
   color: #fff;
-  background: #a1b8be;;
+  background: #a1b8be;
 }
 
 /* 반응형시 보이는 햄버거버튼 */
@@ -130,10 +142,12 @@ a:hover {
   font-size: 24px;
   color: black;
   margin-top: 5px;
-  
 }
 
 
+
+
+/************ 반응형 설정 *************/
 
 @media (max-width: 1200px) {
   .nav-links2 {
@@ -177,6 +191,7 @@ a:hover {
   .logo img {
       width: 60px;
   }
+
   .nav-links {
      visibility: hidden;
       flex-direction: column;
@@ -186,9 +201,9 @@ a:hover {
       margin: 0;
       margin-top: 2vh;
       flex-basis: auto;
-      font-size:16px;
-   
+      font-size:16px; 
   }
+
   .nav-links li {
       text-align: center;
       margin: 0;  
@@ -199,13 +214,9 @@ a:hover {
    
   } 
   
-  
   .nav-links li:hover a {
     color:#fff;
   }
-
-
-
 
   .nav-links2 {
      visibility: hidden;
@@ -217,20 +228,20 @@ a:hover {
       font-size:16px;
       flex-basis: 32%;
   }
+
   .bar {
-      display: block;
-      
+      display: block;   
   }
 
   .nav-links.active {
     overflow: hidden;
-    height: 25vh;
+    height: 28vh;
     display: block;
     visibility: visible;
     transition: all 1s;
-    background-color: white;
-      
+    background-color: white;   
   }
+
   .nav-links2.active {
     /* margin-top: 2vh; */
     height: 7vh;
@@ -240,7 +251,17 @@ a:hover {
     background-color: white;
   }
 
+  .nav-links2 li {
+    text-align: center;
+    margin: 0;  
+  }
+
+  
+  /* 자동로그인 (일일맨,구구맨) 테스트부분 */
+  .auto-login {
+    /* margin: 50px; */
+    text-align: center;
+  }
+
 }
-
-
 

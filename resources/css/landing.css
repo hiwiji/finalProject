@@ -11,16 +11,17 @@ body {
   color: #444444;
 }
 
-/* a {
+a {
   color: #4154f1;
   text-decoration: none;
 }
 
 a:hover {
-  color: #717ff5;
-  text-decoration: none;
-} */
+  /* color: #717ff5; */
+  /* text-decoration: none; */
+} 
 
+/* 
 h1,
 h2,
 h3,
@@ -28,7 +29,16 @@ h4,
 h5,
 h6 {
   font-family: "Nunito", sans-serif;
-} 
+}  */
+
+
+/* 폰트(프리텐다드) */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 
 /*--------------------------------------------------------------
 # Sections (공통) - 각 페이지별 메인제목 및 부제목설명
@@ -128,18 +138,7 @@ section {
   font-size: 26px;
 }
 
-.topbanner .btn-get-started {
-  margin-top: 30px;
-  line-height: 0;
-  padding: 15px 40px;
-  border-radius: 4px;
-  transition: 0.5s;
-  color: #fff;
-  background: #4154f1;
-  box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
-}
-
-/* 푸터버튼 */
+/* 메인 안 무료로사용하기 버튼 설정 */
 .btn-get-started {
   margin-top: 30px;
   line-height: 0;
@@ -147,37 +146,34 @@ section {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #4154f1;
+  background: #4154f1; 
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 
+/* 메인 안 무료로사용하기 버튼 설정 */
 .btn-get-started span {
-  font-family: "Nunito", sans-serif;
+  /* font-family: "Nunito", sans-serif; */
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-.topbanner .btn-get-started span {
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-
-.topbanner .btn-get-started i {
+/* 버튼안 아이콘 */
+.btn-get-started i {
   margin-left: 5px;
   font-size: 18px;
   transition: 0.3s;
 }
 
-.topbanner .btn-get-started:hover i {
+.btn-get-started:hover i {
   transform: translateX(5px);
 }
 
 .topbanner .hero-img {
   text-align: right;
 }
+
+
 
 @media (min-width: 1024px) {
   .topbanner {
