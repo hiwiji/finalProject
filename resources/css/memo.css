@@ -1,0 +1,83 @@
+
+/*--------------------------------------------------------------
+# General (공통)
+--------------------------------------------------------------*/
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+/* a {
+  color: #4154f1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #717ff5;
+  text-decoration: none;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+} 
+
+/*--------------------------------------------------------------
+# Sections (공통) - 각 페이지별 메인제목 및 부제목설명
+--------------------------------------------------------------*/
+section {
+  padding: 25px 0;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: left;
+  margin-top: 120px;
+  padding-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 10px 0 30px 0;
+  color: #4154f1;
+  text-transform: uppercase;
+}
+
+.section-header p {
+  /* margin-top: 30px 0 0 0; */
+  padding: 30px 0px 15px 0px;
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 700;
+  color: #012970;
+  border-bottom: solid 1px #7F7F7F;
+}
+
+@media (max-width: 768px) {
+  .section-header p {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+
+/* 배경색 흰색으로 설정 */
+.bg-body-secondary {
+  --bs-bg-opacity: 0;
+}
+
+
+span {
+  margin-left: 10px;
+  margin-right: 10px;
+}

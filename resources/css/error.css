@@ -1,0 +1,94 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+
+.bi-list {
+  display:none;
+}
+
+
+
+/*--------------------------------------------------------------
+# error
+--------------------------------------------------------------*/
+
+
+/* 거북이 이미지칸 */
+.col-sm-3 {
+  margin-left: 65px;
+  margin-right: -65px;
+
+}
+
+/* 거북이 이미지크기설정 */
+.col-sm-3 > img {
+  margin-top: 250px;
+  /* margin: auto; */
+  height: 200px;
+
+  /* text-align: center; */
+}
+
+/* 오류글씨칸 */
+.col-sm-5 {
+  margin-top: 225px;
+  /* margin-left: 150px; */
+  text-align :center;
+  
+}
+
+
+/* Page Not Found 글씨설정 */
+h1 {
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+/* 죄송합니다 두줄 글씨설정 */
+p { 
+  margin-bottom: 3px;
+}
+
+
+
+/* 이전으로 버튼 */
+.back-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: #fff;
+  background: #a1b8be;
+  border: none;
+}
+
+.back-btn:hover {
+  background: #fff;
+  border: 1px solid #a1b8be;
+  transition: 0.5s;
+  color: #a1b8be;
+}
