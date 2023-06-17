@@ -1,7 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/*--------------------------------------------------------------
-# General (공통)
---------------------------------------------------------------*/
 :root {
   scroll-behavior: smooth;
 }
@@ -11,24 +13,9 @@ body {
   color: #444444;
 }
 
-/* a {
-  color: #4154f1;
-  text-decoration: none;
+.bi-list {
+  display:none;
 }
-
-a:hover {
-  color: #717ff5;
-  text-decoration: none;
-} */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Nunito", sans-serif;
-} 
 
 /*--------------------------------------------------------------
 # Sections (공통) - 각 페이지별 메인제목 및 부제목설명
@@ -71,13 +58,26 @@ section {
 }
 
 
+/****************** 메모 ******************/
+
 /* 배경색 흰색으로 설정 */
 .bg-body-secondary {
   --bs-bg-opacity: 0;
 }
 
 
-span {
-  margin-left: 10px;
-  margin-right: 10px;
+
+
+.allMemo {
+  display: flex;
+}
+
+
+.stickyMemo {
+  margin: 20px 20px 20px 20px;
+  flex-basis: 25%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  
 }
