@@ -7,17 +7,17 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
   
-    <title>워크스페이스-메모</title>
+    <title>메모</title>
 
     <!-- Favicons -->
     <link href="/resources/favicon/favicon-16x16.png" rel="icon">
     <link href="/resources/favicon/apple-icon-60x60.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|
-                Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|
+                Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> -->
 
-    <!-- Fontawesome-->
+    <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0041fb1dcb.js" crossorigin="anonymous"></script>
 
     <!-- Vendor CSS Files -->
@@ -28,73 +28,108 @@
     <link href="/resources/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="/resources/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- CSS File -->
+    <!-- 헤더, 요금제 CSS File -->
     <link href="/resources/css/landing-header.css" rel="stylesheet">
     <link href="/resources/css/memo.css" rel="stylesheet">
 </head>
 
 <body>
-    <main>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top">
+        <div id="allnav" class="container-fluid d-flex container justify-content-between">
+            <nav id="navbar" class="navbar container-fluid">
 
-        <!-- ======= Header ======= -->
-        <header id="header" class="header fixed-top">
-            <div id="allnav" class="container-fluid d-flex container justify-content-between">
-                <nav id="navbar" class="navbar container-fluid">
+                <a href="/html/landing.html" class="logo d-flex">
+                <img src="/resources/images/logo/turtleLogo-green.png" alt="로고안보임">
+                <span>TURTLE</span>
+                </a>
 
-                    <a href="/html/landing.html" class="logo d-flex">
-                    <img src="/resources/images/logo/turtleLogo-green.png" alt="로고안보임">
-                    <span>TURTLE</span>
-                    </a>
-
-                    <ul class="nav-links">
-                        <li><a href="/html/landing.html">소개</a></li>
-                        <li><a href="/html/fee.html">요금제</a></li>
-                        <li><a href="/html/faq.html">고객센터</a></li>
-                    </ul>
-                
-                    <ul class="nav-links2">
-                        <li><a href="#">로그아웃</a></li> 
-                        <li><a href="#" class="nav-btn">프로젝트</a></li> 
-                    </ul>
+                <ul class="nav-links">
+                    <li><a href="/html/landing.html">소개</a></li>
+                    <li><a href="/html/pricing.html">요금제</a></li>
+                    <li><a href="/html/faq.html">고객센터</a></li>
+                </ul>
             
-                    <!-- 반응형시 보이는 햄버거버튼 -->
-                    <a href="#" class="bar"><i class="fa-solid fa-bars"></i></a>
-                </nav>
-            </div>
-        </header>
-        <!-- ======= End Header ======= -->
+                <ul class="nav-links2">
+                    <li><a href="#">로그아웃</a></li> 
+                    <li><a href="#" class="nav-btn">프로젝트</a></li> 
+                </ul>
+        
+                <!-- 반응형시 보이는 햄버거버튼 -->
+                <a href="#" class="bar"><i class="fa-solid fa-bars"></i></a>
+            </nav>
+        </div>
+    </header>
+    <!-- ======= End Header ======= -->
 
 
+    <main id="main">
 
-        <!-- ======= 메모======= -->
+        <!-- 첫번째 페이지 total 협업툴 -->
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+        <div class="blank1"></div>
+  
+
+        <!-- ======= Memo Section ======= -->
         <section class="memo">
+            <div class="container" data-aos="fade-up">
+             
+                <h1>메모</h1>
 
-                
-            <!-- 제목 -->
-            <header class="section-header"> 
-            <p>메모</p>
-            </header>
+                <div class="allMemo">
+                    <div class="stickyMemo" id="memo1">
+                        <!-- 아이콘창 -->
+                        <div class="icon">
+                            <!-- 생성버튼 -->
+                            <i class="fa-solid fa-plus createBtn"></i>
+                            <!-- 삭제버튼 -->
+                            <i class="fa-solid fa-trash removeBtn"></i>
+                            <!-- 닫기버튼 -->
+                            <i class="fa-solid fa-xmark closeBtn"></i>
+                        </div>
+                    
+                        <!-- 메모입력칸 -->
+                        <div class="writeMemo">
+                            글씨입력하세요
+                        </div>
+                        
+                        <!-- 수정부분 -->
+                        <div class="modify">
+                            <div class="modifyInfo">
+                                <div class="moUser">최근수정자 : 위지은</div>
+                                <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
+                            </div>
+                            <!-- 프로필사진 -->
+                            <div class="profile">
+                                <img src="/resources/images/landing/오둥1.jpeg">
+                            </div>
+                        </div>                        
+                    </div>
 
-            <div class="allMemo">
-                <div class="stickyMemo">메모</div>
-                <div class="stickyMemo">메모</div>
-                <div class="stickyMemo">메모</div>
-                <div class="stickyMemo">메모</div>
-            </div>    
-    
+
+
+                    <div class="stickyMemo" id="memo2">메모</div>
+                    <div class="stickyMemo" id="memo3">메모</div>
+                    <div class="stickyMemo" id="memo4">메모</div>
+                </div>      
+            
+            </div>
 
         </section>
-  
+        <!-- End Memo Section -->
+
+       
+
     </main>
     <!-- End main -->
 
 
 
-    
     <!-- jQuery 라이브러리 추가 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   
     <!-- Vendor JS Files -->
     <script src="/resources/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="/resources/vendor/aos/aos.js"></script>
@@ -106,5 +141,6 @@
 
     <!-- 랜딩 js -->
     <script src="/resources/js/landing.js"></script>
+    <script src="/resources/js/memo.js"></script>
 </body>
 </html>
