@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>글자수 제한</title>
+  <style>
+    #editable {
+      border: 1px solid black;
+      padding: 10px;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div id="editable" contenteditable="true"></div>
+  <p id="counter">0 / 150</p>
+
+  <script>
+    //글자수제한
+    const editable = document.getElementById('editable');
+    const maxLength = 150;
+
+    editable.addEventListener('input', function() {
+      const text = this.innerText;
+      if (text.length > maxLength) {
+        this.innerText = text.slice(0, maxLength);
+      }
+    });
+
+
+    // 글자수카운ㄴ트
+    const editable = document.getElementById('editable');
+    const counter = document.getElementById('counter');
+    const maxLength = 150;
+
+    editable.addEventListener('input', function() {
+      const text = this.innerText;
+      const remaining = maxLength - text.length;
+      counter.textContent = `${text.length} / ${maxLength}`;
+
+      if (remaining < 0) {
+        this.innerText = text.slice(0, maxLength);
+      }
+    });
+
+
+  </script>
+</body>
+</html>

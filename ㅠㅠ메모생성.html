@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/0041fb1dcb.js" crossorigin="anonymous"></script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <title>버튼 클릭 시 사라지기</title>
+
+    <style>
+        .allMemo {
+            display: flex;
+            border : 2px solid black;
+            border-radius: 10px;
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+
+        /* 메모생성하는 버튼 */
+        #createBtn {
+            position:absolute;
+            left: 150px;
+            top: 180px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1>메모</h1>
+    <div class="allMemo">
+        <!-- 메모생성버튼 -->
+        <i class="fa-solid fa-circle-plus fa-2xl" id="createBtn"></i>
+        
+
+         <!-- 메모1개 -->
+         <template id="memoTemplate">
+            <div class="memoDetail" id="memo1">
+                <!-- 아이콘창 -->
+                <div class="icon">
+                    <!-- 삭제버튼 -->
+                    <i class="fa-solid fa-trash removeBtn" onclick="removeButton(this)"></i>
+                    <!-- <i class="fa-regular fa-circle-plus"></i> -->
+                </div>
+            
+                <!-- 메모입력칸 -->
+                <div class="memoContent" id="content" contenteditable="true" 
+                    onkeypress="handleKeyPress(event)">
+                </div>
+
+        
+                <!-- 수정부분 -->
+                <div class="modify">
+                    <div class="modifyInfo">
+                        <div class="moUser">최근수정자 : 위지은</div>
+                        <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
+                    </div>
+                    <!-- 프로필사진 -->
+                    <div class="profile">
+                        <img src="/resources/images/landing/오둥1.jpeg">
+                    </div>
+                </div>                        
+            </div>
+        </template> 
+    </div>
+
+    
+
+
+    <script>
+        // createBtn 요소를 찾습니다.
+var createBtn = document.getElementById('createBtn');
+
+// createBtn에 클릭 이벤트 리스너를 추가합니다.
+createBtn.addEventListener('click', function() {
+  // createBtn 요소를 숨깁니다.
+  createBtn.style.display = 'none';
+
+  // memoTemplate 요소를 찾습니다.
+  var memoTemplate = document.getElementById('memoTemplate');
+
+  // memoTemplate 내용을 복제하여 새로운 요소를 생성합니다.
+  var newMemo = memoTemplate.content.cloneNode(true);
+
+  // 생성된 메모 상자를 allMemo 클래스 요소에 추가합니다.
+  var allMemo = document.querySelector('.allMemo');
+  allMemo.appendChild(newMemo);
+});
+    </script>
+
+</body>
+</html>

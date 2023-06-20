@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Memo Example</title>
+  <script src="https://kit.fontawesome.com/0041fb1dcb.js" crossorigin="anonymous"></script>
+
+  <style>
+    .allMemo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .fa-circle-plus {
+      color: blue;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .memoDetail {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <template id="memoTemplate">
+    <div class="memoDetail" id="memo1">
+      <!-- 아이콘창 -->
+      <div class="icon">
+        <!-- 삭제버튼 -->
+        <i class="fas fa-trash removeBtn" onclick="removeButton(this)"></i>
+      </div>
+
+      <!-- 메모입력칸 -->
+      <div class="memoContent" id="content" contenteditable="true" onkeypress="handleKeyPress(event)"></div>
+
+      <!-- 수정부분 -->
+      <div class="modify">
+        <div class="modifyInfo">
+          <div class="moUser">최근수정자: 위지은</div>
+          <div class="moDate">최근수정일: 2023-06-17 01:52</div>
+        </div>
+        <!-- 프로필사진 -->
+        <div class="profile">
+          <img src="/resources/images/landing/오둥1.jpeg">
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <div class="allMemo">
+    <i class="far fa-circle-plus" onclick="addMemo()"></i>
+  </div>
+
+  <script>
+    let memoCount = 1;
+
+    function addMemo() {
+      const template = document.getElementById('memoTemplate');
+      const memoContainer = document.querySelector('.allMemo');
+      const newMemo = template.content.cloneNode(true);
+      const addButton = document.createElement('i');
+      
+      newMemo.querySelector('.memoDetail').id = `memo${++memoCount}`;
+      addButton.className = 'far fa-circle-plus';
+      addButton.onclick = addMemo;
+
+      memoContainer.parentNode.insertBefore(newMemo, memoContainer.nextSibling);
+      memoContainer.parentNode.insertBefore(addButton, memoContainer.nextSibling);
+      memoContainer.remove();
+    }
+
+    function removeButton(button) {
+      const memoDetail = button.closest('.memoDetail');
+      const addButton = memoDetail.nextElementSibling;
+      memoDetail.remove();
+      addButton.remove();
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+      }
+    }
+  </script>
+</body>
+</html>

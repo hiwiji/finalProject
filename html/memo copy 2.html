@@ -7,7 +7,7 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
   
-    <title>메모</title>
+    <title>메모테스트중</title>
 
     <!-- Favicons -->
     <link href="/resources/favicon/favicon-16x16.png" rel="icon">
@@ -30,7 +30,7 @@
 
     <!-- 헤더, 요금제 CSS File -->
     <link href="/resources/css/landing-header.css" rel="stylesheet">
-    <link href="/resources/css/memo.css" rel="stylesheet">
+    <link href="/resources/css/memo copy 2.css.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -73,54 +73,57 @@
         <div class="blank1"></div>
   
 
-        <!-- ======= Memo Section ======= -->
-        <section class="memo">
-            <div class="container" data-aos="fade-up">
-             
-                <h1>메모</h1>
+       <!-- ======= Memo Section ======= -->
+       <section class="memo">
+        <div class="container" data-aos="fade-up">
+         
+            <h1>메모</h1>
 
-                <!-- 메모박스창 section -->
-                <div class="allMemo">
-                    <!-- 메모플러스버튼 -->
-                    <!-- <i class="fa-solid fa-circle-plus fa-2xl" id="plusBtn"></i> -->
+            <!-- 메모박스창 section -->
+            <div class="allMemo">
+                <!-- 메모플러스버튼 -->
+                <i class="fa-solid fa-circle-plus fa-2xl" id="plusBtn" onclick="replaceButtonWithDiv()"></i>
+            <div>
+                <!-- 메모1개 -->
+            <template id="memoTemplate">
+                <div class="memoDetail" id="memo1">
+                    <!-- 아이콘창 -->
+                    <div class="icon">
+                        <!-- 삭제버튼 -->
+                        <i class="fa-solid fa-trash removeBtn" onclick="removeButton(this)"></i>
+                        <!-- <i class="fa-regular fa-circle-plus"></i> -->
+                    </div>
                 
-                    <!-- 메모1개 -->
-                    <div class="memoDetail" id="memo1">
-                        <!-- 아이콘창 -->
-                        <div class="icon">
-                            <!-- 삭제버튼 -->
-                            <i class="fa-solid fa-trash removeBtn" onclick="removeButton(this)"></i>
-                            <!-- <i class="fa-regular fa-circle-plus"></i> -->
-                        </div>
-                    
-                        <!-- 메모입력칸 -->
-                        <div class="memoContent" id="content" contenteditable="true" 
-                            onkeypress="handleKeyPress(event)">
-                        </div>
-    
-                
-                        <!-- 수정부분 -->
-                        <div class="modify">
-                            <div class="modifyInfo">
-                                <div class="moUser">최근수정자 : 구구맨</div>
-                                <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
-                            </div>
-                            <!-- 프로필사진 -->
-                            <div class="profile">
-                                <img src="/resources/images/landing/오둥1.jpeg">
-                            </div>
-                        </div>                        
+                    <!-- 메모입력칸 -->
+                    <div class="memoContent" id="content" contenteditable="true" 
+                        onkeypress="handleKeyPress(event)">
                     </div>
 
+            
+                    <!-- 수정부분 -->
+                    <div class="modify">
+                        <div class="modifyInfo">
+                            <div class="moUser">최근수정자 : 위지은</div>
+                            <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
+                        </div>
+                        <!-- 프로필사진 -->
+                        <div class="profile">
+                            <img src="/resources/images/landing/오둥1.jpeg">
+                        </div>
+                    </div>                        
+                </div>
+            </template>
+
+
+
+
+<!--                     
                     <div class="memoDetail" id="memo2">메모</div>
                     <div class="memoDetail" id="memo3">메모</div>
-                    <div class="memoDetail" id="memo4">메모</div> 
-                </div>
-                
-
-
-            </div>      
-    
+                    <div class="memoDetail" id="memo4">메모</div> -->
+                </div>      
+            
+            </div>
 
         </section>
         <!-- End Memo Section -->
@@ -144,7 +147,7 @@
 
     <!-- 랜딩 js -->
     <script src="/resources/js/landing.js"></script>
-    <script src="/resources/js/memo.js.js"></script>
+    <script src="/resources/js/memo copy 2.js"></script>
 </body>
 </html>
 

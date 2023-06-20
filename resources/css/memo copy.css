@@ -24,7 +24,7 @@ body {
 #memo1 {
   background-color : rgb(246, 169, 176);
 }
-
+/* 
 #memo2 {
   background-color : rgb(254, 225, 130);
 }
@@ -35,13 +35,12 @@ body {
 
 #memo4{
   background-color: #9FDFEB;
-}
+} */
 
 
 /*--------------------------------------------------------------
 # Memo
 --------------------------------------------------------------*/
-
 
 .memo {
   display: wrap;
@@ -58,14 +57,29 @@ body {
   --bs-bg-opacity: 0;
 }
 
+/* --------------------------------------------------------- */
 
-
+/* 메모박스창 section */
 .allMemo {
   display: flex;
-  border : 1px solid #eee;
+  border : 2px solid black;
   border-radius: 10px;
-  /* padding: 40px 10px 10px 10px; */
+  width: 100%;
+  height: 400px;
+  position: relative;
 }
+
+
+/* 메모생성하는 버튼 */
+#createBtn {
+  position:absolute;
+  left: 150px;
+  top: 180px;
+  cursor: pointer;
+}
+
+
+
 
 /* 하나의 메모전체 */
 .memoDetail {
@@ -82,24 +96,22 @@ body {
   display: hidden;
 }
 
+
+
+
+
+/******************** 메모장부분 ******************/
+
 /* 아이콘부분 */
 .icon {
   display: flex;
   flex-basis: 10%;
   position: relative;
   /* background-color:violet; */
-
 }
 
-/* 생성버튼 */
-.createBtn {
-  display: fixed;
-  position: absolute;
-  left : 6px;
-  top : 6px;
-}
 
-/* 삭제버튼 */
+/* 삭제(휴지통 아이콘) 버튼 */
 .removeBtn {
   display: fixed;
   position: absolute;
@@ -107,13 +119,6 @@ body {
   top: 9px;
 }
 
-/* 닫기버튼 */
-.closeBtn {
-  display: fixed;
-  position: absolute;
-  right: 10px;
-  top: 9px;
-}
 
 /* 메모입력칸 */
 .memoContent{
@@ -175,7 +180,6 @@ body {
   object-fit: cover;
   position: absolute;
 }
-
 
 .memoDetail > p {
   text-align: right;

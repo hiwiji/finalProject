@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="allMemo">
+    <!-- 메모플러스버튼 -->
+    <i class="fas fa-plus-circle fa-2x" id="plusBtn"></i>
+
+    <!-- 메모들을 담을 컨테이너 -->
+    <div id="memoContainer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        let count = 0;
+
+        // 메모 추가 버튼 클릭 시
+        $('#plusBtn').on('click', function() {
+          // 최대 2개까지만 생성되도록 조건 확인
+          if (count < 2) {
+            // 메모 상세 영역 생성
+            const memoDetail = $('<div class="memoDetail"></div>');
+
+            // 아이콘창 생성
+            const icon = $('<div class="icon"></div>');
+
+            // 삭제 버튼 생성
+            const removeBtn = $('<i class="fas fa-trash removeBtn"></i>');
+            removeBtn.on('click', function() {
+              // 메모 삭제
+              $(this).closest('.memoDetail').remove();
+              count--; // div 개수 감소
+            });
+
+            // 아이콘창에 삭제 버튼 추가
+            icon.append(removeBtn);
+
+            // 메모입력칸 생성
+            const memoContent = $('<div class="memoContent" contenteditable="true"></div>');
+
+            // 수정부분 생성
+            const modify = $('<div class="modify"></div>');
+
+            // 수정 정보 생성
+            const modifyInfo = $('<div class="modifyInfo"></div>');
+            const moUser = $('<div class="moUser">최근수정자: 위지은</div>');
+            const moDate = $('<div class="moDate">최근수정일: 2023-06-17 01:52</div>');
+            modifyInfo.append(moUser, moDate);
+
+            // 프로필사진 생성
+            const profile = $('<div class="profile"></div>');
+            const profileImg = $('<img src="/resources/images/landing/오둥1.jpeg">');
+            profile.append(profileImg);
+
+            // 수정부분에 수정 정보와 프로필사진 추가
+            modify.append(modifyInfo, profile);
+
+            // 메모 상세 영역에 아이콘창, 메모입력칸, 수정부분 추가
+            memoDetail.append(icon, memoContent, modify);
+
+            // 메모 컨테이너에 메모 상세 영역 추가
+            $('#memoContainer').append(memoDetail);
+
+            count++; // div 개수 증가
+          } else {
+            alert("최대 2개까지만 생성할 수 있습니다.");
+          }
+        });
+      });
+    </script>
+  </div>
+</body>
+</html>
