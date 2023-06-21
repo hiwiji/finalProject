@@ -3,22 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <script src="https://kit.fontawesome.com/0041fb1dcb.js" crossorigin="anonymous"></script>
     <title>Document</title>
+
+    <style>
+
+      
+/* 전체 메모박스창 section */
+.allMemo {
+  display: flex;
+  border : 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+
+}
+
+
+/* 팀메모 박스창  */
+.teamMemo {
+  display: flex;
+  border : 2px solid black;
+  border-radius: 10px;
+  width: 50%;
+  height: 300px;
+  /* background-color:cornflowerblue; */
+  position: relative;
+}
+
+
+/* 개인메모 박스창 */
+.personalMemo {
+  display: flex;
+  border : 2px solid black;
+  border-radius: 10px;
+  width: 50%;
+  height: 300px;
+  /* background-color:rgb(89, 142, 115); */
+  position: relative;
+}
+
+
+/* 하나의 메모전체 */
+.memoDetail {
+  display: flex;
+  flex-direction: column;
+  /* text-align :left; */
+  margin: 10px 10px;
+  flex-basis: 100%;
+  width: 200px;
+  height: 280px;
+  max-width: 100%;
+  /* border: 1px solid black; */
+  box-shadow : rgba( 0,0,0,0.26);
+  display: hidden;
+  background-color:aquamarine;
+}
+
+/* 메모 생성(플러스 아이콘) 버튼 */
+
+/* 팀메모 생성버튼 */
+.t-plus-btn {
+  cursor: pointer;
+  left: 150px;
+  top : 130px;
+  position: absolute;
+  color: black;
+}
+
+/* 개인메모 생성버튼 */
+.p-plus-btn {
+  cursor: pointer;
+  left: 150px;
+  top : 130px;
+  position: absolute;
+  color: black;
+}
+
+
+/******************** 메모장부분 ******************/
+
+/* 아이콘부분 */
+.icon {
+  display: flex;
+  flex-basis: 10%;
+  position: relative;
+  /* background-color:violet; */
+}
+
+
+/* 메모 삭제(휴지통 아이콘) 버튼 */
+.removeBtn {
+  display: fixed;
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 9px;
+}
+
+
+/* 메모입력칸 */
+.memoContent{
+  display: flex;
+  flex-basis: 78%;
+  padding: 10px;
+  outline:none;
+  font-weight: bold;
+  padding: 15px;
+  overflow:hidden;
+}
+
+/* 수정부분 */
+.modify {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 16%;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  padding: 5px;
+  color:black;
+  margin: 5px 10px;
+}
+
+/*수정이름.일자부분*/
+.modifyInfo {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%
+}
+
+/* 프로필사진부분 */
+.profile {
+  display: flex;
+  flex-basis: 14%;
+  border-radius: 70%;
+  overflow: hidden;
+  position:relative;
+  right: -17px;
+  top: 1px;
+}
+
+/* 최근수정자 */
+.moUser {
+  display: flex;
+}
+
+/* 최근수정일 */
+.moDate{
+  display: flex;
+}
+
+
+/* 프로필 이미지크기 */
+.profile > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.memoDetail > p {
+  text-align: right;
+  margin-bottom: 0rem;
+  color: #eee;
+  font-size: 10px;
+  padding-right: 10px;
+
+}
+    </style>
 </head>
 <body>
-    <button id="bt">요소 제거</button>
-    <div id="content">
-      <a href="https://jenny-daru.tistory.com/" target="_blank" title="새창">윤제니</a>
+ 
+
+  <div id='my_div'>
+    <img src="/resources/images/landing/client-3.png">
+  </div>
+
+  <div class="memoDetail" id="memo1">
+    <!-- 아이콘창 -->
+    <div class="icon" onclick="deleteDiv()">
+        <!-- 삭제버튼 -->
+        <i class="fa-solid fa-trash removeBtn"></i>
     </div>
+
+    <!-- 메모입력칸 -->
+    <div class="memoContent" id="content" contenteditable="true"></div>
+
+    <!-- 수정부분 -->
+    <div class="modify">
+        <div class="modifyInfo">
+            <div class="moUser">최근수정자 : 위지은</div>
+            <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
+        </div>
+        <!-- 프로필사진 -->
+        <div class="profile">
+            <img src="/resources/images/landing/오둥1.jpeg">
+        </div>
+    </div>                        
+  </div>
+
+ 
+  <!-- <div onclick="deleteDiv()">
+    <i class="fa-solid fa-trash removeBtn"></i>
+  </div> -->
+
+
+
   </body>
   
   <script>
-    window.onload = function () {
-      var bt = document.getElementById("bt");
-      var content = document.getElementById("content");
-      bt.onclick = function () {
-        content.removeChild(content.firstChild);
-      };
-    };
+  function deleteDiv() {
+  const div = document.querySelector(".memoDetail");
+  
+  div.remove();
+} 
   </script>
 </html>

@@ -83,20 +83,18 @@ body {
 }
 
 
-/* 개인메모 박스창 */
-.personalMemo {
-  display: flex;
-  border : 2px solid black;
-  border-radius: 10px;
-  width: 50%;
-  height: 300px;
-  /* background-color:rgb(89, 142, 115); */
-  position: relative;
+/* 팀메모 생성버튼 */
+.t-plus-btn {
+  cursor: pointer;
+  left: 150px;
+  top : 130px;
+  position: absolute;
+  color: black;
 }
 
 
-/* 하나의 메모전체 */
-.memoDetail {
+/* 팀 메모지 */
+.tMemoDetail {
   display: flex;
   flex-direction: column;
   /* text-align :left; */
@@ -110,16 +108,23 @@ body {
   display: hidden;
 }
 
-/* 메모 생성(플러스 아이콘) 버튼 */
 
-/* 팀메모 생성버튼 */
-.t-plus-btn {
-  cursor: pointer;
-  left: 150px;
-  top : 130px;
-  position: absolute;
-  color: black;
+
+
+
+/* 개인메모 박스창 */
+.personalMemo {
+  display: flex;
+  border : 2px solid black;
+  border-radius: 10px;
+  width: 50%;
+  height: 300px;
+  /* background-color:rgb(89, 142, 115); */
+  position: relative;
 }
+
+
+
 
 /* 개인메모 생성버튼 */
 .p-plus-btn {
@@ -129,6 +134,23 @@ body {
   position: absolute;
   color: black;
 }
+
+
+/* 개인 메모지 */
+.pMemoDetail {
+  display: flex;
+  flex-direction: column;
+  /* text-align :left; */
+  margin: 10px 10px;
+  flex-basis: 50%;
+  width: 200px;
+  height: 280px;
+  max-width: 100%;
+  /* border: 1px solid black; */
+  box-shadow : rgba( 0,0,0,0.26);
+  display: hidden;
+}
+
 
 
 /******************** 메모장부분 ******************/
@@ -143,14 +165,31 @@ body {
 
 
 /* 메모 삭제(휴지통 아이콘) 버튼 */
-.removeBtn {
+ .removeBtn {
   display: fixed;
   position: absolute;
   cursor: pointer;
   right: 10px;
   top: 9px;
-}
+} 
 
+/* 팀메모 삭제버튼 */
+/* .tRemoveBtn {
+  display: fixed;
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 9px;
+} */
+
+/* 개인메모 삭제버튼 */
+/* .pRemoveBtn {
+  display: fixed;
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 9px;
+} */
 
 /* 메모입력칸 */
 .memoContent{
