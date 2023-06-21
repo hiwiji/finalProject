@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bt">요소 제거</button>
+    <div id="content">
+      <a href="https://jenny-daru.tistory.com/" target="_blank" title="새창">윤제니</a>
+    </div>
+  </body>
+  
+  <script>
+    window.onload = function () {
+      var bt = document.getElementById("bt");
+      var content = document.getElementById("content");
+      bt.onclick = function () {
+        content.removeChild(content.firstChild);
+      };
+    };
+  </script>
+</html>

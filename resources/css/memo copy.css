@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -21,22 +20,6 @@ body {
 }
 
 
-#memo1 {
-  background-color : rgb(246, 169, 176);
-}
-/* 
-#memo2 {
-  background-color : rgb(254, 225, 130);
-}
-
-#memo3 {
-  background-color: rgb(161, 213, 174);
-}
-
-#memo4{
-  background-color: #9FDFEB;
-} */
-
 
 /*--------------------------------------------------------------
 # Memo
@@ -57,28 +40,59 @@ body {
   --bs-bg-opacity: 0;
 }
 
+
+#memo1 {
+  background-color : rgb(246, 169, 176);
+}
+/* 
+#memo2 {
+  background-color : rgb(254, 225, 130);
+}
+
+#memo3 {
+  background-color: rgb(161, 213, 174);
+}
+
+#memo4{
+  background-color: #9FDFEB;
+} */
+
+
 /* --------------------------------------------------------- */
 
-/* 메모박스창 section */
+/* 전체 메모박스창 section */
 .allMemo {
   display: flex;
   border : 2px solid black;
   border-radius: 10px;
   width: 100%;
-  height: 400px;
+  height: 300px;
+
+}
+
+
+/* 팀메모 박스창  */
+.teamMemo {
+  display: flex;
+  border : 2px solid black;
+  border-radius: 10px;
+  width: 50%;
+  height: 300px;
+  /* background-color:cornflowerblue; */
   position: relative;
 }
 
 
-/* 메모생성하는 버튼 */
-#createBtn {
-  position:absolute;
-  left: 150px;
-  top: 180px;
-  cursor: pointer;
+/* 개인메모 박스창 */
+.personalMemo {
+  display: flex;
+  border : 2px solid black;
+  border-radius: 10px;
+  width: 50%;
+  height: 300px;
+  /* background-color:rgb(89, 142, 115); */
+  position: relative;
 }
-
-
 
 
 /* 하나의 메모전체 */
@@ -87,7 +101,7 @@ body {
   flex-direction: column;
   /* text-align :left; */
   margin: 10px 10px;
-  flex-basis: 25%;
+  flex-basis: 50%;
   width: 200px;
   height: 280px;
   max-width: 100%;
@@ -96,8 +110,25 @@ body {
   display: hidden;
 }
 
+/* 메모 생성(플러스 아이콘) 버튼 */
 
+/* 팀메모 생성버튼 */
+.t-plus-btn {
+  cursor: pointer;
+  left: 150px;
+  top : 130px;
+  position: absolute;
+  color: black;
+}
 
+/* 개인메모 생성버튼 */
+.p-plus-btn {
+  cursor: pointer;
+  left: 150px;
+  top : 130px;
+  position: absolute;
+  color: black;
+}
 
 
 /******************** 메모장부분 ******************/
@@ -111,10 +142,11 @@ body {
 }
 
 
-/* 삭제(휴지통 아이콘) 버튼 */
+/* 메모 삭제(휴지통 아이콘) 버튼 */
 .removeBtn {
   display: fixed;
   position: absolute;
+  cursor: pointer;
   right: 10px;
   top: 9px;
 }
@@ -124,7 +156,6 @@ body {
 .memoContent{
   display: flex;
   flex-basis: 78%;
-  /* background-color: aqua; */
   padding: 10px;
   outline:none;
   font-weight: bold;
