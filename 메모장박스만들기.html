@@ -1,79 +1,319 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>230622 메모장박스만들기</title>
-  <script src="https://kit.fontawesome.com/0041fb1dcb.js" crossorigin="anonymous"></script>
-  <style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <title>230622 메모장박스만들기</title>
 
-    .allMemo {
-        display: flex;
-        border: 2px solid black;
-        height: 300px;
-        width:  100%; 
-        padding: 10px;
-        gap: 10px;
+    <!-- Favicons -->
+    <link href="/resources/favicon/favicon-16x16.png" rel="icon">
+    <link href="/resources/favicon/apple-icon-60x60.png" rel="apple-touch-icon">
 
-    }
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/0041fb1dcb.js" crossorigin="anonymous"></script>
 
-    .team {
-      display: flex;
-      /* flex-wrap: wrap; */
-    }
+    <!-- Vendor CSS Files -->
+    <link href="/resources/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resources/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/resources/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/resources/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/resources/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+ 
+    <!-- 헤더, 요금제 CSS File -->
+    <link href="/resources/css/landing-header.css" rel="stylesheet">
 
-    .box {
-      width: 200px;
-      height: 200px;
-      background-color: lightblue;
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    .tAddBtn {
-      /* order: 1; */
-      display: block;
-      height: 200px;
-      width:200px;
-      border: none;
-      background: forestgreen; /*버튼배경색 */
-      color: black;  /* 버튼 +색 */
-      cursor: pointer;
-      transition: black 0.1s;
-    }
-  </style>
+
+<style>
+
+.blank1 {
+  height: 200px;
+}
+
+
+/* 모든메모영역 */
+.allMemo {
+    display: flex;
+    border: 2px solid black;
+    height: 300px;
+    width:  100%; 
+    padding: 10px;
+}
+
+/* 팀메모 영역 */
+.team {
+    /* background-color: yellow; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 48%);
+    width: 48%;
+    gap: 10px;
+    /* flex-wrap: wrap; */
+}
+
+/* 개인메모영역 */
+.personal {
+    background-color: green;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+    width: 50%;
+}
+
+/* 메모지 속성*/
+.memoDetail {
+    display:grid;
+    /* width: 300px; */
+    height: 280px;
+    max-width: 100%;
+    box-shadow : rgba( 0,0,0,0.26);
+    background-color : rgb(254, 225, 130);
+}
+
+/* 팀 추가버튼 */
+.tAddBtn {
+    /* order: 1; */
+    display: block;
+    height: 280px;
+    width:100%;
+    font-size: 120px;
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.2);  /* 버튼 +색 */
+    cursor: pointer;
+    transition: black 0.1s;
+}
+
+/* 개인 추가버튼 */
+.pAddBtn {
+    /* order: 1; */
+    display: block;
+    height: 280px;
+    width:200px;
+    font-size: 120px;
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.2);  /* 버튼 +색 */
+    cursor: pointer;
+    transition: black 0.1s;
+}
+
+
+/*********************************/
+
+/******************** 메모장부분 ******************/
+
+/* 아이콘부분 */
+.icon {
+  /* display: flex; */
+  position: relative;
+  /* background-color:violet; */
+  height: 34px;
+}
+
+
+/* 메모 삭제(휴지통 아이콘) 버튼 */
+.removeBtn {
+  display: fixed;
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 9px;
+} 
+
+.removeBtn:hover {
+  transition: 0.2s;
+  color:#eee;
+}
+
+
+/* 메모입력칸 */
+.memoDetail > textarea {
+  /* display: flex; */
+  /* flex-basis: 78%; */
+  height:190px;
+  padding: 8px;
+  outline:none;
+  resize:none;
+  border: none;
+  /* font-weight: bold; */
+  font-size: 14px;
+  overflow:hidden;
+  background-color: transparent;
+}
+
+/* 수정부분 */
+.modify {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 16%;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  padding: 5px;
+  color:black;
+  margin: 5px 10px;
+}
+
+/*수정이름.일자부분*/
+.modifyInfo {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%
+}
+
+/* 최근수정자 */
+.moUser {
+  display: flex;
+}
+
+/* 최근수정일 */
+.moDate{
+  display: flex;
+}
+
+/* 프로필사진부분 */
+.profile {
+  display: flex;
+  flex-basis: 14%;
+  border-radius: 70%;
+  overflow: hidden;
+  position:relative;
+  right: -17px;
+  top: 1px;
+}
+
+/* 프로필 이미지크기 */
+.profile > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+
+
+</style>
 </head>
-<body>
-    <div class="allMemo">
-        <div class="team"></div>
-        <button class="tAddBtn">박스 추가</button>
-    </div>  
+    <body>
 
-  <script>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top">
+        <div id="allnav" class="container-fluid d-flex container justify-content-between">
+            <nav id="navbar" class="navbar container-fluid">
+
+                <a href="/html/landing.html" class="logo d-flex">
+                <img src="/resources/images/logo/turtleLogo-green.png" alt="로고안보임">
+                <span>TURTLE</span>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="/html/landing.html">소개</a></li>
+                    <li><a href="/html/pricing.html">요금제</a></li>
+                    <li><a href="/html/faq.html">고객센터</a></li>
+                </ul>
+            
+                <ul class="nav-links2">
+                    <li><a href="#">로그아웃</a></li> 
+                    <li><a href="#" class="nav-btn">프로젝트</a></li> 
+                </ul>
+        
+                <!-- 반응형시 보이는 햄버거버튼 -->
+                <a href="#" class="bar"><i class="fa-solid fa-bars"></i></a>
+            </nav>
+        </div>
+    </header>
+    <!-- ======= End Header ======= -->
+
+    
+
+    <main id="main">
+        
+        <!-- 첫번째 페이지 total 협업툴 -->
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+        <div class="blank1"></div>
+  
+        <!-- ======= Memo Section ======= -->
+        <section class="memo">
+            <div class="container">
+        
+                <h1>워크스페이스 - 메모</h1>
+                
+                <!-- 모든메모창 -->
+                <div class="allMemo">
+                    <!-- 팀메모창 -->
+                    <div class="team">
+                        <button class="tAddBtn">+</button>
+                    </div>
+                    <!-- 개인메모창 -->
+                    <div class="personal">
+                        <button class="pAddBtn">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End main -->
+    
+
+<script>
     const team = document.querySelector(".team");
+    //팀버튼 변수설정
     const tAddBtn = document.querySelector(".tAddBtn");
 
     // 박스추가 버튼 클릭 시 div 박스 생성
     tAddBtn.addEventListener("click", function() {
-      const div = document.createElement("div");
-      div.classList.add("box");
-      team.appendChild(div);
+        const tMemobox = document.createElement("div");
+      
+        tMemobox.className = "memoDetail";
+        tMemobox.innerHTML = `
+    <div class="icon">
+        <i class="fa-solid fa-trash removeBtn" onclick="tDeleteMemo(this)"></i>
+    </div>
+    <textarea class="memoContent" placeholder="메모를 입력하세요..."></textarea>
+    <div class="modify">
+        <div class="modifyInfo">
+            <div class="moUser">최근수정자 : 위지은</div>
+            <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
+        </div>
+        <div class="profile">
+            <img src="/resources/images/landing/오둥1.jpeg">
+        </div>
+    </div>
 
-      //삭제 버튼 요소 생성
-      const removeBtn = document.createElement("button");
-      removeBtn.innerHTML = `<i class="fa-solid fa-trash removeBtn"></i>`;
-      div.appendChild(removeBtn);
 
-      // 삭제 버튼 클릭 시 div 박스 삭제
-      removeBtn.addEventListener("click", function() {
-        div.parentNode.removeChild(div);
+    
+`;
+
+
+
+        tMemobox.classList.add("memoDetail");
+        team.appendChild(tMemobox);
+
+        //삭제 버튼 요소 생성
+        //const removeBtn = document.createElement("button");
+        //removeBtn.innerHTML = `<i class="fa-solid fa-trash removeBtn"></i>`;
+        //tMemobox.appendChild(removeBtn);
+
+        // 삭제 버튼 클릭 시 div 박스 삭제
+       //removeBtn.addEventListener("click", function() {
+       // tMemobox.parentNode.removeChild(tMemobox);
+       // updateButtonVisibility();
+        //});
+      
+
         updateButtonVisibility();
-      });
-
-      updateButtonVisibility();
+    
     });
 
     // 버튼 표시 여부 업데이트
     function updateButtonVisibility() {
-      const boxes = team.querySelectorAll(".box");
+        const boxes = team.querySelectorAll(".memoDetail");
       if (boxes.length === 0) {
         tAddBtn.style.display = "block";
       } else if (boxes.length === 1) {
@@ -84,8 +324,31 @@
       }
     }
 
-    // 초기 버튼 표시 여부 설정
-    updateButtonVisibility();
+
+    
+    function tDeleteMemo(element) {
+            const tMemobox = element.parentNode.parentNode;
+            tMemobox.parentNode.removeChild(tMemobox);
+            updateButtonVisibility();
+            }
+
+
+// 초기 버튼 표시 여부 설정
+updateButtonVisibility();
+    
+
   </script>
+
+    <!-- Vendor JS Files -->
+    <script src="/resources/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/resources/vendor/aos/aos.js"></script>
+    <script src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/resources/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/resources/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/resources/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/resources/vendor/php-email-form/validate.js"></script>
+
+    <!-- 랜딩 js -->
+    <script src="/resources/js/landing.js"></script>
 </body>
 </html>
