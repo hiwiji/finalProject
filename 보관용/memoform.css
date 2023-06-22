@@ -1,0 +1,187 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+
+.bi-list {
+  display:none;
+}
+
+
+#memo1 {
+  background-color : rgb(246, 169, 176);
+}
+
+#memo2 {
+  background-color : rgb(254, 225, 130);
+}
+
+#memo3 {
+  background-color: rgb(161, 213, 174);
+}
+
+#memo4{
+  background-color: #9FDFEB;
+}
+
+
+/*--------------------------------------------------------------
+# Memo
+--------------------------------------------------------------*/
+
+
+.memo {
+  display: wrap;
+  margin-bottom: 200px;
+}
+
+.blank1 {
+  height: 300px;
+}
+
+
+/* 배경색 흰색으로 설정 */
+.bg-body-secondary {
+  --bs-bg-opacity: 0;
+}
+
+
+
+.allMemo {
+  display: flex;
+  border : 1px solid #eee;
+  border-radius: 10px;
+  /* padding: 40px 10px 10px 10px; */
+}
+
+/* 하나의 메모전체 */
+.memoDetail {
+  display: flex;
+  flex-direction: column;
+  /* text-align :left; */
+  margin: 10px 10px;
+  flex-basis: 25%;
+  width: 200px;
+  height: 280px;
+  max-width: 100%;
+  /* border: 1px solid black; */
+  box-shadow : rgba( 0,0,0,0.26);
+  display: hidden;
+}
+
+/* 아이콘부분 */
+.icon {
+  display: flex;
+  flex-basis: 10%;
+  position: relative;
+  /* background-color:violet; */
+
+}
+
+/* 생성버튼 */
+.createBtn {
+  display: fixed;
+  position: absolute;
+  left : 6px;
+  top : 6px;
+}
+
+/* 삭제버튼 */
+.removeBtn {
+  display: fixed;
+  position: absolute;
+  right: 10px;
+  top: 9px;
+}
+
+/* 닫기버튼 */
+.closeBtn {
+  display: fixed;
+  position: absolute;
+  right: 10px;
+  top: 9px;
+}
+
+/* 메모입력칸 */
+.memoContent{
+  display: flex;
+  flex-basis: 78%;
+  /* background-color: aqua; */
+  padding: 10px;
+  outline:none;
+  font-weight: bold;
+  padding: 15px;
+  overflow:hidden;
+}
+
+/* 수정부분 */
+.modify {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 16%;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  padding: 5px;
+  color:black;
+  margin: 5px 10px;
+}
+
+/*수정이름.일자부분*/
+.modifyInfo {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%
+}
+
+/* 프로필사진부분 */
+.profile {
+  display: flex;
+  flex-basis: 14%;
+  border-radius: 70%;
+  overflow: hidden;
+  position:relative;
+  right: -17px;
+  top: 1px;
+}
+
+/* 최근수정자 */
+.moUser {
+  display: flex;
+}
+
+/* 최근수정일 */
+.moDate{
+  display: flex;
+}
+
+
+/* 프로필 이미지크기 */
+.profile > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+
+.memoDetail > p {
+  text-align: right;
+  margin-bottom: 0rem;
+  color: #eee;
+  font-size: 10px;
+  padding-right: 10px;
+
+}

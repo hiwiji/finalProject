@@ -1,33 +1,33 @@
-// const addBtn = document.querySelector(".add-note"); 
+const addBtn = document.querySelector(".add-note"); 
 
-// addBtn.addEventListener("click", () => {
+addBtn.addEventListener("click", () => {
 
-//     const memobox = document.createElement("div");
+    const memobox = document.createElement("div");
 
-//     memobox.innerHTML = `
-//     <div class="icon" onclick="tDeleteMemo()">
-//         <i class="fa-solid fa-trash removeBtn"></i>
-//     </div>
-//     <textarea class="memoContent" placeholder="메모를 입력하세요..."></textarea>
-//     <div class="modify">
-//         <div class="modifyInfo">
-//           <div class="moUser">최근수정자 : 위지은</div>
-//           <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
-//         </div>
-//         <div class="profile">
-//           <img src="/resources/images/landing/오둥1.jpeg">
-//         </div>
-//     </div>
-//     `;
+    memobox.innerHTML = `
+    <div class="icon" onclick="tDeleteMemo()">
+        <i class="fa-solid fa-trash removeBtn"></i>
+    </div>
+    <textarea class="memoContent" placeholder="메모를 입력하세요..."></textarea>
+    <div class="modify">
+        <div class="modifyInfo">
+          <div class="moUser">최근수정자 : 위지은</div>
+          <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
+        </div>
+        <div class="profile">
+          <img src="/resources/images/landing/오둥1.jpeg">
+        </div>
+    </div>
+    `;
 
-//     document.querySelector(".allMemo").appendChild(memobox);
+    document.querySelector(".allMemo").appendChild(memobox);
 
-//     //memobox 개수 확인
-//     const memoElements = document.qerrySelectorAll(".memoDetail");
+    //memobox 개수 확인
+    const memoElements = document.qerrySelectorAll(".memoDetail");
 
-// });
+});
 
-// const notesContainer = document.querySelector(".container");
+const notesContainer = document.querySelector(".container");
 
 
 

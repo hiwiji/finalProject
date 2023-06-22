@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <title>메모</title>
+
+    <!-- Favicons -->
+    <link href="/resources/favicon/favicon-16x16.png" rel="icon">
+    <link href="/resources/favicon/apple-icon-60x60.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|
+                Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> -->
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/0041fb1dcb.js" crossorigin="anonymous"></script>
+
+    <!-- Vendor CSS Files -->
+    <link href="/resources/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resources/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/resources/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/resources/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/resources/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- 헤더, 요금제 CSS File -->
+    <link href="/resources/css/landing-header.css" rel="stylesheet">
+    <link href="/resources/css/memo.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top">
+        <div id="allnav" class="container-fluid d-flex container justify-content-between">
+            <nav id="navbar" class="navbar container-fluid">
+
+                <a href="/html/landing.html" class="logo d-flex">
+                <img src="/resources/images/logo/turtleLogo-green.png" alt="로고안보임">
+                <span>TURTLE</span>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="/html/landing.html">소개</a></li>
+                    <li><a href="/html/pricing.html">요금제</a></li>
+                    <li><a href="/html/faq.html">고객센터</a></li>
+                </ul>
+            
+                <ul class="nav-links2">
+                    <li><a href="#">로그아웃</a></li> 
+                    <li><a href="#" class="nav-btn">프로젝트</a></li> 
+                </ul>
+        
+                <!-- 반응형시 보이는 햄버거버튼 -->
+                <a href="#" class="bar"><i class="fa-solid fa-bars"></i></a>
+            </nav>
+        </div>
+    </header>
+    <!-- ======= End Header ======= -->
+
+
+    <main id="main">
+
+        <!-- 첫번째 페이지 total 협업툴 -->
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+        <div class="blank1"></div>
+  
+
+        <!-- ======= Memo Section ======= -->
+        <section class="memo">
+            <div class="container" data-aos="fade-up">
+             
+                <h1>메모</h1>
+
+                <!-- 메모박스창 section -->
+                <div class="allMemo">
+                    <!-- 메모플러스버튼 -->
+                    <!-- <i class="fa-solid fa-circle-plus fa-2xl" id="plusBtn"></i> -->
+                
+                    <!-- 메모1개 -->
+                    <div class="memoDetail" id="memo1">
+                        <!-- 아이콘창 -->
+                        <div class="icon">
+                            <!-- 삭제버튼 -->
+                            <i class="fa-solid fa-trash removeBtn" onclick="removeButton(this)"></i>
+                            <!-- <i class="fa-regular fa-circle-plus"></i> -->
+                        </div>
+                    
+                        <!-- 메모입력칸 -->
+                        <div class="memoContent" id="content" contenteditable="true">
+                        </div>
+    
+                
+                        <!-- 수정부분 -->
+                        <div class="modify">
+                            <div class="modifyInfo">
+                                <div class="moUser">최근수정자 : 구구맨</div>
+                                <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
+                            </div>
+                            <!-- 프로필사진 -->
+                            <div class="profile">
+                                <img src="/resources/images/landing/오둥1.jpeg">
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <div class="memoDetail" id="memo2">메모</div>
+                    <div class="memoDetail" id="memo3">메모</div>
+                    <div class="memoDetail" id="memo4">메모</div> 
+                </div>
+                
+
+
+            </div>      
+    
+
+        </section>
+        <!-- End Memo Section -->
+
+
+    </main>
+    <!-- End main -->
+
+
+
+   
+   
+    <!-- Vendor JS Files -->
+    <script src="/resources/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/resources/vendor/aos/aos.js"></script>
+    <script src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/resources/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/resources/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/resources/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/resources/vendor/php-email-form/validate.js"></script>
+
+    <!-- 랜딩 js -->
+    <script src="/resources/js/landing.js"></script>
+    <script src="/resources/js/memo.js.js"></script>
+</body>
+</html>
