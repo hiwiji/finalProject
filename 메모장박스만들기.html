@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>230622 메모장박스만들기</title>
+  <script src="https://kit.fontawesome.com/0041fb1dcb.js" crossorigin="anonymous"></script>
+  <style>
+
+    .allMemo {
+        display: flex;
+        border: 2px solid black;
+        height: 300px;
+        width:  100%; 
+        padding: 10px;
+        gap: 10px;
+
+    }
+
+    .team {
+      display: flex;
+      /* flex-wrap: wrap; */
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .tAddBtn {
+      /* order: 1; */
+      display: block;
+      height: 200px;
+      width:200px;
+      border: none;
+      background: forestgreen; /*버튼배경색 */
+      color: black;  /* 버튼 +색 */
+      cursor: pointer;
+      transition: black 0.1s;
+    }
+  </style>
+</head>
+<body>
+    <div class="allMemo">
+        <div class="team"></div>
+        <button class="tAddBtn">박스 추가</button>
+    </div>  
+
+  <script>
+    const team = document.querySelector(".team");
+    const tAddBtn = document.querySelector(".tAddBtn");
+
+    // 박스추가 버튼 클릭 시 div 박스 생성
+    tAddBtn.addEventListener("click", function() {
+      const div = document.createElement("div");
+      div.classList.add("box");
+      team.appendChild(div);
+
+      //삭제 버튼 요소 생성
+      const removeBtn = document.createElement("button");
+      removeBtn.innerHTML = `<i class="fa-solid fa-trash removeBtn"></i>`;
+      div.appendChild(removeBtn);
+
+      // 삭제 버튼 클릭 시 div 박스 삭제
+      removeBtn.addEventListener("click", function() {
+        div.parentNode.removeChild(div);
+        updateButtonVisibility();
+      });
+
+      updateButtonVisibility();
+    });
+
+    // 버튼 표시 여부 업데이트
+    function updateButtonVisibility() {
+      const boxes = team.querySelectorAll(".box");
+      if (boxes.length === 0) {
+        tAddBtn.style.display = "block";
+      } else if (boxes.length === 1) {
+        tAddBtn.style.display = "block";
+        team.appendChild(tAddBtn);
+      } else {
+        tAddBtn.style.display = "none";
+      }
+    }
+
+    // 초기 버튼 표시 여부 설정
+    updateButtonVisibility();
+  </script>
+</body>
+</html>

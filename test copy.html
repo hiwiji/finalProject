@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <script src="https://kit.fontawesome.com/0041fb1dcb.js" crossorigin="anonymous"></script>
+    <title>div동적토글테스트중</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+  <div id='my_div'>
+    버튼을 누르면 이 div는 토글됩니다.
+  </div>
+  
+  <input type='button'
+         value='toggleDiv'
+         onclick='toggleDiv()'/>
+
+
+</body>
+  
+  <script>
+
+    
+    
+    function toggleDiv() {
+      const div = document.getElementById('my_div');
+      
+      if(div.style.display === 'none')  {
+        div.style.display = 'block';
+      }else {
+        div.style.display = 'none';
+      }
+
+      // if(div.style.display === 'block')  {
+      //   div.style.display = 'none';
+      // }else {
+      //   div.style.display = 'block';
+      // }
+    } 
+
+    
+
+  </script>
+</html>
+
+
+<!-- if (memoElements.length <= 1) {
+  tPlusBtn.style.display = "block";
+} else {
+  tPlusBtn.style.display = "none";
+}
+}); -->

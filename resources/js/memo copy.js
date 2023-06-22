@@ -1,23 +1,12 @@
-
-
-// 메모 삭제
-function deleteMemo() {
-    const removeBtn = document.querySelector(".memoDetail");
-
-    removeBtn.remove();
-}
-
-
-
 // 팀메모 생성
 const tPlusBtn = document.querySelector(".t-plus-btn");
 
 tPlusBtn.addEventListener("click", () => {
-  const memobox = document.createElement("div");
-  memobox.className = "memoDetail";
+  const tMemobox = document.createElement("div");
+  tMemobox.className = "tMemoDetail";
 
-  memobox.innerHTML = `
-    <div class="icon" onclick="deleteMemo()">
+  tMemobox.innerHTML = `
+    <div class="icon" onclick="tDeleteMemo()">
       <i class="fa-solid fa-trash removeBtn"></i>
     </div>
 
@@ -34,30 +23,46 @@ tPlusBtn.addEventListener("click", () => {
     </div>
   `;
 
-  // 생성한 div를 원하는 곳에 추가하는 코드 (예시로 body에 추가)
-  document.querySelector(".teamMemo").appendChild(memobox);
+    // 생성한 div를 원하는 곳에 추가하는 코드
+    document.querySelector(".teamMemo").appendChild(tMemobox);
 
-  // memoContent의 개수 확인
-  const memoElements = document.querySelectorAll(".memoDetail");
+    // memoContent의 개수 확인
+    const memoElements = document.querySelectorAll(".tMemoDetail");
 
-  // memoContent의 개수에 따라 tPlusBtn의 표시 여부 결정
-  if (memoElements.length >= 2) {
-    tPlusBtn.style.display = "none";
-  } else {
-    tPlusBtn.style.display = "block";
-  }
+    // memoContent의 개수에 따라 tPlusBtn의 표시 여부 결정
+    if (memoElements.length <= 1) {
+        tPlusBtn.style.display = "block";
+    } else {
+        tPlusBtn.style.display = "none";
+    }
 });
+
+
+
+// 팀메모 삭제
+function tDeleteMemo() {
+    const removeBtn = document.querySelector(".tMemoDetail");
+
+    removeBtn.remove();
+}
+
+
+
+
+
+
+
 
 
 // 개인메모 생성
 const pPlusBtn = document.querySelector(".p-plus-btn");
 
 pPlusBtn.addEventListener("click", () => {
-  const memobox1 = document.createElement("div");
-  memobox1.className = "memoDetail";
+  const pMemobox = document.createElement("div");
+  pMemobox.className = "pMemoDetail";
 
-  memobox1.innerHTML = `
-    <div class="icon" onclick="deleteMemo()">
+  pMemobox.innerHTML = `
+    <div class="icon" onclick="pDeleteMemo()">
       <i class="fa-solid fa-trash removeBtn"></i>
     </div>
 
@@ -74,11 +79,11 @@ pPlusBtn.addEventListener("click", () => {
     </div>
   `;
 
-  // 생성한 div를 원하는 곳에 추가하는 코드 (예시로 body에 추가)
-  document.querySelector(".personalMemo").appendChild(memobox1);
+  // 생성한 div를 원하는 곳에 추가하는 코드
+  document.querySelector(".personalMemo").appendChild(pMemobox);
 
   // memoContent의 개수 확인
-  const memoElements = document.querySelectorAll(".memoDetail");
+  const memoElements = document.querySelectorAll(".pMemoDetail");
 
   // memoContent의 개수에 따라 tPlusBtn의 표시 여부 결정
   if (memoElements.length >= 2) {
@@ -87,3 +92,12 @@ pPlusBtn.addEventListener("click", () => {
     pPlusBtn.style.display = "block";
   }
 });
+
+
+
+// 개인메모 삭제
+function pDeleteMemo() {
+    const removeBtn = document.querySelector(".pMemoDetail");
+
+    removeBtn.remove();
+}

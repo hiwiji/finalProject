@@ -1,62 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        body {
-  margin: 0;
-  background: #009578;
-}
-
-#app {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  padding: 24px;
-  gap: 24px;
-}
-
-.note {
-  height: 200px;
-  box-sizing: border-box;
-  padding: 16px;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
-  resize: none;
-  font-family: sans-serif;
-  font-size: 16px;
-}
-
-.add-note {
-  height: 200px;
-  border: none;
-  outline: none;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  font-size: 120px;
-  color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.add-note:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-    </style>
-</head>
-<body>
-    
-    <div id="app">
-        <button class="add-note" type="button">+</button>
-      </div>
-
-
-
-<script>
 const notesContainer = document.getElementById("app");
 const addNoteButton = notesContainer.querySelector(".add-note");
 
@@ -69,8 +10,6 @@ updateAddNoteButtonVisibility(); // Check visibility on page load
 
 addNoteButton.addEventListener("click", () => addNote());
 
-
-// 기존 메모내용 검색 (내부스토리지에서)
 function getNotes() {
   return JSON.parse(localStorage.getItem("stickynotes-notes") || "[]");
 }
@@ -79,7 +18,6 @@ function saveNotes(notes) {
   localStorage.setItem("stickynotes-notes", JSON.stringify(notes));
 }
 
-//메모 요소 생성
 function createNoteElement(id, content) {
   const element = document.createElement("textarea");
 
@@ -93,7 +31,7 @@ function createNoteElement(id, content) {
 
   element.addEventListener("dblclick", () => {
     const doDelete = confirm(
-      "메모 삭제할래여.......?"
+      "Are you sure you wish to delete this sticky note?"
     );
 
     if (doDelete) {
@@ -104,7 +42,6 @@ function createNoteElement(id, content) {
   return element;
 }
 
-//노트 생성
 function addNote() {
   const notes = getNotes();
   
@@ -135,7 +72,6 @@ function updateNote(id, newContent) {
   saveNotes(notes);
 }
 
-//삭제 메모 
 function deleteNote(id, element) {
   const notes = getNotes().filter((note) => note.id != id);
 
