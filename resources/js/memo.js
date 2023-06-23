@@ -1,31 +1,37 @@
 // ====================== 팀 메모 설정 js ======================= 
 
+// .team에 team 이름의 변수 할당
 const team = document.querySelector(".team");
 
-//팀버튼 변수설정
+// .tAddBtn에 tAddBtn 이름의 변수 할당
 const tAddBtn = document.querySelector(".tAddBtn");
 
-// 팀 박스추가 버튼 클릭 시 div 박스 생성
+// tAddBtn버튼 클릭시 이벤트 추가
+
 tAddBtn.addEventListener("click", function() {
+    // div요소인 tMemobox 생성하면서 tMemobox 이름의 변수 할당
     const tMemobox = document.createElement("div");
   
+    // tMemobox 변수는 html상  .tMemoDetail 이름을 가지고 있고
+    // innerHTML을 통해 tMemoDetail 안에 있던 코드를 그대로 가지고 온다
+    // createElement로 하나하나 요소주기 귀찮아서 -_-
     tMemobox.className = "tMemoDetail";
     tMemobox.innerHTML = `
-    
-    <div class="icon">
-        <i class="fa-solid fa-trash tRemoveBtn" onclick="tDeleteMemo(this)"></i>
-    </div>
-    <textarea class="memoContent" placeholder="메모를 입력하세요..."></textarea>
-    <div class="modify">
-        <div class="modifyInfo">
-            <div class="moUser">최근수정자 : 위지은</div>
-            <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
+        <div class="icon">
+            <i class="fa-solid fa-trash tRemoveBtn" onclick="tDeleteMemo(this)"></i>
         </div>
-        <div class="profile">
-            <img src="/resources/images/landing/오둥1.jpeg">
-        </div>
-    </div> 
-    `;
+        <textarea class="memoContent" placeholder="메모를 입력하세요..." maxlength="150"></textarea>
+        <p><span id="counter"> 0 </span> / 150</p>
+        <div class="modify">
+            <div class="modifyInfo">
+                <div class="moUser">최근수정자 : 위지은</div>
+                <div class="moDate">최근수정일 : 2023-06-17 01:52</div>
+            </div>
+            <div class="profile">
+                <img src="/resources/images/landing/오둥1.jpeg">
+            </div>
+        </div> 
+        `;
 
 
     tMemobox.classList.add("tMemoDetail");
@@ -41,7 +47,36 @@ tAddBtn.addEventListener("click", function() {
     // tMemobox.parentNode.removeChild(tMemobox);
     // updateButtonVisibility();
     //});
+
   
+    // 팀메모 textarea 글자 수 제한 설정
+    const textarea = tMemobox.querySelector(".memoContent");
+    
+    textarea.addEventListener("input", function() {
+        const maxLength = parseInt(textarea.getAttribute("maxlength"));
+        const currentLength = textarea.value.length;
+        const counter = tMemobox.querySelector("#counter");
+        
+        // textConten 안에 모든 값 다 가져옴.
+        counter.textContent = currentLength;
+ 
+        if (currentLength > maxLength) {
+            //substring(int startIndex, int endIndex) : 문자열 자르기 (0부터 maxLength까지)
+            textarea.value = textarea.value.substring(0, maxLength);
+            counter.textContent = maxLength;
+        }
+ 
+        // 글자 수에 따른 텍스트 색상 조정
+        if (currentLength <= maxLength - 1) {
+            counter.style.color = "grey";
+        } else {
+            counter.style.color = "red";
+            const str = textarea.value;
+            textarea.value = str.substr(0, maxLength);
+        }
+    });
+  
+    // 초기 버튼 표시 여부 설정
     tUpdateButtonVisibility();
 
 });
@@ -61,15 +96,20 @@ function tUpdateButtonVisibility() {
     }
 }
 
-// 팀메모 삭제버튼 요소 생성ㅇ
+// 팀메모 삭제버튼 요소 생성
 function tDeleteMemo(element) {
-        const tMemobox = element.parentNode.parentNode;
-        tMemobox.parentNode.removeChild(tMemobox);
-        tUpdateButtonVisibility();
-        }
+    const tMemobox = element.parentNode.parentNode;
+    tMemobox.parentNode.removeChild(tMemobox);
+    tUpdateButtonVisibility();
+}
 
 // 초기 버튼 표시 여부 설정
 tUpdateButtonVisibility();
+
+
+
+
+
 
 
 // ====================== 개인 메모 설정 js ======================= 
@@ -89,7 +129,8 @@ pAddBtn.addEventListener("click", function() {
     <div class="icon">
         <i class="fa-solid fa-trash pRemoveBtn" onclick="pDeleteMemo(this)"></i>
     </div>
-    <textarea class="memoContent" placeholder="메모를 입력하세요..."></textarea>
+    <textarea class="memoContent" placeholder="메모를 입력하세요..." maxlength="150"></textarea>
+    <p><span id="counter"> 0 </span> / 150</p>
     <div class="modify">
         <div class="modifyInfo">
             <div class="moUser">최근수정자 : 누군데</div>
@@ -105,6 +146,38 @@ pAddBtn.addEventListener("click", function() {
     pMemobox.classList.add("pMemoDetail");
     personal.appendChild(pMemobox);
 
+
+    // 개인메모 textarea 글자 수 제한 설정
+    const textarea = pMemobox.querySelector(".memoContent");
+    
+    textarea.addEventListener("input", function() {
+        const maxLength = parseInt(textarea.getAttribute("maxlength"));
+        const currentLength = textarea.value.length;
+        const counter = pMemobox.querySelector("#counter");
+        
+        // textConten 안에 모든 값 다 가져옴.
+        counter.textContent = currentLength;
+ 
+        if (currentLength > maxLength) {
+            //substring(int startIndex, int endIndex) : 문자열 자르기 (0부터 maxLength까지)
+            textarea.value = textarea.value.substring(0, maxLength);
+            counter.textContent = maxLength;
+        }
+ 
+        // 글자 수에 따른 텍스트 색상 조정
+        if (currentLength <= maxLength - 1) {
+            counter.style.color = "grey";
+        } else {
+            counter.style.color = "red";
+            const str = textarea.value;
+            textarea.value = str.substr(0, maxLength);
+        }
+    });
+  
+    // 초기 버튼 표시 여부 설정
+    pUpdateButtonVisibility();
+
+
     //삭제 버튼 요소 생성
     //const pRemoveBtn = document.createElement("button");
     //pRemoveBtn.innerHTML = `<i class="fa-solid fa-trash pRemoveBtn"></i>`;
@@ -116,7 +189,6 @@ pAddBtn.addEventListener("click", function() {
     // updateButtonVisibility();
     //});
   
-    pUpdateButtonVisibility();
 
 });
 
@@ -147,3 +219,4 @@ pUpdateButtonVisibility();
 
 
 
+// 

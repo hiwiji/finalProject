@@ -172,11 +172,26 @@
 }
   
 
-/* 메모입력칸 */
+/* 팀메모입력칸 */
 .tMemoDetail > textarea {
     /* display: flex; */
     /* flex-basis: 78%; */
-    height:190px;
+    height:165px;
+    padding: 8px;
+    outline:none;
+    resize:none;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    overflow:hidden;
+    background-color: transparent;
+}
+
+/* 개인 메모입력칸 */
+.pMemoDetail > textarea {
+    /* display: flex; */
+    /* flex-basis: 78%; */
+    height:165px;
     padding: 8px;
     outline:none;
     resize:none;
@@ -187,20 +202,33 @@
     background-color: transparent;
 }
 
-/* 메모입력칸 */
-.pMemoDetail > textarea {
-    /* display: flex; */
-    /* flex-basis: 78%; */
-    height:190px;
-    padding: 8px;
-    outline:none;
-    resize:none;
-    border: none;
-    /* font-weight: bold; */
-    font-size: 14px;
-    overflow:hidden;
-    background-color: transparent;
-  }
+/* 글자수 카운트 */
+.tMemoDetail > p {
+    color: grey;
+    font-size: 12px;
+    text-align: end;
+    padding-right: 8px;
+}
+
+.pMemoDetail > p {
+    color: grey;
+    font-size: 12px;
+    text-align: end;
+    padding-right: 8px;
+}
+
+p > #counter {
+    color: grey;
+    font-size: 12px;
+    text-align: end;
+    /* padding-right: 8px; */
+}
+
+/* 부트스트랩 p설정 해제 */
+p { 
+    margin-bottom : 0rem;
+}
+
 
 /* 수정부분 */
 .modify {
@@ -249,3 +277,6 @@
     object-fit: cover;
     position: absolute;
 }
+
+
+
