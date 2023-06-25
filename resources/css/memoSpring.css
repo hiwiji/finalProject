@@ -1,0 +1,321 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    scroll-behavior: smooth;
+}
+  
+
+
+.bi-list {
+    display:none;
+}
+  
+  
+/*--------------------------------------------------------------
+# Memo
+--------------------------------------------------------------*/
+
+
+.memo {
+    display: grid;
+}
+  
+
+/* 헤더와 본문 사이 공백 */
+.blank1 {
+    height: 200px;
+}
+
+
+
+/*********************jsp 여기서부터 작업 ***************
+/* 전체 메모 영역 */
+.memo-area {
+    display: flex;
+    border: 1px solid #eee;
+    /* height: 300px; */
+    width:  80%; 
+    padding: 10px;
+    gap: 10px;
+    box-shadow: 3px 4px 5px 3px #d9d9d9;
+    border-radius: 10px;
+}
+
+
+
+/* 팀 메모 영역 */
+.team {
+    /* background-color: yellow; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 48.5%);
+    width: 50%;
+    gap: 10px;
+    /* flex-wrap: wrap; */
+}
+
+
+/* 개인 메모 영역 (원래 .personal 이였음) */
+.alone {
+    /* background-color: green; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 48.5%);
+    width: 50%;
+    gap: 10px;
+
+}
+
+
+
+/* 메모장 전체 .memoDetail */
+/*앞단에서 메모 영역별로 구분해서 썼음*/
+/* .memoDetail {
+	width: 200px;
+	height: 230px;
+	margin-right: 5px;
+} */
+
+
+
+/* 팀 메모지 속성 .tMemoDetail*/ 
+.workspace {
+    display:grid;
+    /* width: 300px; */
+    height: 280px;
+    max-width: 100%;
+    box-shadow : rgba(0,0,0,0.26);
+    background-color : rgb(254, 225, 130);
+}
+
+
+/* 개인 메모지 속성 .pMemoDetail*/
+.personal {
+    display:grid;
+    /* width: 300px; */
+    height: 280px;
+    max-width: 100%;
+    box-shadow : rgba(0,0,0,0.26);
+    background-color : #9FDFEB;
+}
+
+
+/* 팀 메모지 추가버튼 .tAddBtn */
+.wAddBtn {
+    /* order: 1; */
+    display: block;
+    border: none;
+    height: 280px;
+    width:100%;
+    background: rgba(0, 0, 0, 0.05); /*버튼배경색 */
+    color: rgba(0, 0, 0, 0.2);  /* 버튼 +색 */
+    /* border-radius: 10px; */
+    font-size: 120px;  
+    cursor: pointer;
+    transition: black 0.1s;
+}
+
+.wAddBtn:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* 개인 메모지 추가버튼 */
+.pAddBtn {
+    /* order: 1; */
+    display: block;
+    border: none;
+    height: 280px;
+    width:100%;
+    background: rgba(0, 0, 0, 0.05); /*버튼배경색 */
+    color: rgba(0, 0, 0, 0.2);  /* 버튼 +색 */
+    /* border-radius: 10px; */
+    font-size: 120px;  
+    cursor: pointer;
+    transition: black 0.1s;
+}
+
+.pAddBtn:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+
+
+/******************** 메모지 속성 부분 ******************/
+
+/* 아이콘부분 */
+.icon {
+    /* display: flex; */
+    position: relative;
+    /* background-color:violet; */
+    height: 34px;
+}
+
+
+/* 팀 메모 삭제(휴지통 아이콘) 버튼 (.wRemoveBtn) */
+.wRemoveBtn {
+    display: fixed;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 9px;
+} 
+
+.wRemoveBtn:hover {
+    transition: 0.2s;
+    color:grey;
+}
+
+
+/* 개인 메모 삭제(휴지통 아이콘) 버튼 */
+.pRemoveBtn {
+    display: fixed;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 9px;
+} 
+  
+.pRemoveBtn:hover {
+    transition: 0.2s;
+    color:grey;
+}
+  
+
+/* 팀 메모(.tMemoDetail) 입력칸 */
+.workspace > textarea {
+    /* display: flex; */
+    /* flex-basis: 78%; */
+    height:165px;
+    padding: 8px;
+    outline:none;
+    resize:none;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    overflow:hidden;
+    background-color: transparent;
+}
+
+/* 개인 메모(.pMemoDetail) 입력칸 */
+.personal > textarea {
+    /* display: flex; */
+    /* flex-basis: 78%; */
+    height:165px;
+    padding: 8px;
+    outline:none;
+    resize:none;
+    border: none;
+    /* font-weight: bold; */
+    font-size: 14px;
+    overflow:hidden;
+    background-color: transparent;
+}
+
+/* 팀 메모 글자수 카운트 */
+.workspace > p {
+    color: grey;
+    font-size: 12px;
+    text-align: end;
+    padding-right: 8px;
+}
+
+/* 개인 메모 글자수 카운트 */
+.personal > p {
+    color: grey;
+    font-size: 12px;
+    text-align: end;
+    padding-right: 8px;
+}
+
+p > #counter {
+    color: grey;
+    font-size: 12px;
+    text-align: end;
+    /* padding-right: 8px; */
+}
+
+
+/* 부트스트랩 p설정 해제 */
+p { 
+    margin-bottom : 0rem;
+}
+
+
+/* 기존에 메모작성 되는구간(textarea랑 같은거임) */
+
+
+/* .memoContent {
+    height: 200px;
+    overflow: hidden;
+} 
+
+.memoContent:focus {
+    outline: none;
+} */
+
+
+/* 해당사항 없음...
+.memoContent.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: normal;
+  }*/
+
+
+
+/* 수정부분 (.modify)*/
+.memoInfo {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 16%;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    padding: 10px 5px 5px 5px;
+    color:black;
+    margin: 5px 5px;
+}
+
+/*수정이름.일자부분*/
+.modifyInfo {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%
+}
+
+/* 최근수정자 (.moUser) */
+.memberName {
+    display: flex;
+}
+
+/* 최근수정일 (.moDate) */
+.memoUpdateDate {
+    display: flex;
+}
+
+/* 프로필사진부분 (.profile) */
+.profile-image {
+    display: flex;
+    flex-basis: 18%;
+    border-radius: 70%;
+    overflow: hidden;
+    position:relative;
+    right: -7px;
+    top: 1px;
+}
+
+/* 프로필 이미지크기 (.profile > img) */
+.profile-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+
+
