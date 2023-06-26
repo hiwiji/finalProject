@@ -74,6 +74,7 @@ section {
 
 .gy-4 {
 	margin: 0px 90px 90px 90px;
+    display: flex;
 }
 
 .intro > p {
@@ -87,12 +88,11 @@ section {
 }
 
 
-/* 박스크기 정렬 (기본값 bootstrap-grid.css) */
-/* .gy-4 > .col-sm-4 {
-  width: 32%;
-  margin-left: 3px;
-  margin-right: 3px;
-}  */
+
+.col-sm-4 {
+    flex-direction: column-reverse;
+    display: flex;
+}
 
 
 /* 요금제 각 박스 설정 */
@@ -183,7 +183,7 @@ section {
 /* 가입하기 버튼 */
 .pricing .btn-buy {
 	display: inline-block;
-	padding: 10px 90px 10px 90px;
+	padding: 10px 80px 10px 80px;
 	margin: 20px;
 	border-radius: 4px;
 	color: white;
@@ -207,7 +207,7 @@ section {
 /* 사용중 버튼 */
 .pricing .btn-buy-using {
     display: inline-block;
-    padding: 10px 90px 10px 90px;
+    padding: 10px 80px 10px 80px;
     margin: 20px;
     border-radius: 4px;
     color: #a1b8be;
@@ -255,69 +255,87 @@ section {
   }
 } */
 
-@media (max-width: 1399px) {
-    .box .btn-buy {
-        padding: 10px 70px 10px 60px; 
-        margin: 20px;
-        border-radius: 4px;
-        color: white;
-        background-color: #1A73E8;
-        transition: none;
-        font-size: 16px;
-        font-weight: 400;
-        font-family: "Nunito", sans-serif;
-        font-weight: 600;
-        transition: 0.3s;
-        border: 1px solid #1A73E8;
-        text-decoration: none;
+
+
+@media screen and (min-width: 320px) {
+    
+    .col-sm-4 {
+        width: 100%;
+        text-align: center;
+        margin: 50px auto;
+    
+    }
+    .gy-4 {
+        margin: 0px 0px 0px 0px;
+        
+    }
+
+    .pricing ul {
+        font-size: 14px;
+    }
+
+    .pricing .btn-buy {
+        padding:10px 80px 10px 80px;
+    }
+
+    .section-header p {
+        font-size: 36px;
+    }
+
+    
+}
+
+
+
+@media screen and (min-width: 576px) {
+    .section-header {
+        font-size: 36px; 
+    }
+    .gy-4 {
+        margin: 0px 0px 0px 0px
     }
     
-    /* 사용중 버튼 */
-    .btn-buy-using {
-        padding: 10px 60px 10px 60px; 
-        margin: 20px;
-        border-radius: 4px;
-        color: #a1b8be;
-        transition: none;
-        font-size: 16px;
-        font-weight: 400;
-        font-family: "Nunito", sans-serif;
-        font-weight: 600;
-        transition: 0.3s;
-        border: 1px solid #a1b8be;
-        text-decoration: none;
+    .col-sm-4 {
+        width: 100%;
+        margin: auto;
+        /* text-align: center; */
     }
 
 
-      
-}
-
-@media (min-width: 576px) {
-    .container-sm, .container {
-      /* max-width: 540px; */
-    }
 }
  
-@media (min-width: 768px) {
-    .container-md, .container-sm, .container {
-      max-width: 720px;
+@media screen and (min-width: 768px) {
+    .gy-4 {
+        margin: 0px 0px 0px 0px
+    }
+
+    
+
+    .col-sm-4 {
+        width: 50%;
+        margin: auto;
+        display: wrap;
     }
 }
   
+
 @media (min-width: 992px) {
-    .container-lg, .container-md, .container-sm, .container {
-      max-width: 960px;
+    .col-sm-4 {
+        width: 33.3%;
     }
+   
 }
   
 @media (min-width: 1200px) {
-    .container-xl, .container-lg, .container-md, .container-sm, .container {
-      max-width: 1140px;
+    .col-sm-4 {
+        width: 33.3%;
     }
+    
 }
   
 @media (min-width: 1400px) {
-    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-      max-width: 1320px;
+    .col-sm-4 {
+        width: 33.3%;
     }
+   
 }
