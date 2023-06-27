@@ -36,7 +36,7 @@ section {
 
 .container > .section-header {
 	text-align: left;
-	padding: 50px 0px 50px 0px;
+	padding: 70px 0px 50px 0px;
 }
 
 .section-header h2 {
@@ -52,7 +52,7 @@ section {
 	margin: 10px 0 0 0;
 	padding: 0;
 	font-size: 38px;
-	line-height: 42px;
+	/* line-height: 42px; */
 	font-weight: 700;
 	color:   #012970;
 }
@@ -97,7 +97,7 @@ section {
 
 /* 요금제 각 박스 설정 */
 .pricing .box {
-    margin: 10px;
+    /* margin: 10px; */
     /* padding: 20px 20px; */
     background: #fff;
     text-align: center;
@@ -257,19 +257,23 @@ section {
 
 
 
-@media screen and (min-width: 320px) {
-    
-    .col-sm-4 {
-        width: 100%;
-        text-align: center;
-        margin: 50px auto;
-    
+@media screen and (max-width: 435px) {
+
+    .container {
+        /* margin-left: 24.8px; */
+        margin-right: 24.8px;
     }
-    .gy-4 {
-        margin: 0px 0px 0px 0px;
-        
+    
+    .container > .section-header {
+        padding: 70px 12px 10px 12px;
     }
 
+    .col-sm-4 {
+        width: 295px;
+        text-align: center;
+        margin: 50px auto;
+    }
+    
     .pricing ul {
         font-size: 14px;
     }
@@ -278,64 +282,171 @@ section {
         padding:10px 80px 10px 80px;
     }
 
+    .pricing .btn-buy-using {
+        padding: 10px 80px 10px 80px;
+    }
+
     .section-header p {
-        font-size: 36px;
+        font-size: 19px;
+        margin: 0px;
+        text-align: left;
+    }
+
+    .gy-4 {
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+@media screen and (min-width: 434px) {
+    
+    /* .container {
+        margin-left: 24.8px;
+        margin-right: 24.8px;
+    } */
+
+    .container > .section-header {
+        padding: 70px 12px 10px 12px;
     }
 
     
-}
+    .section-header p {
+        font-size: 28px;
+        margin: 0px;
+        text-align: left;
+    }
 
+    .col-sm-4 {
+        width: 326px;
+        text-align: center;
+        margin: 50px auto;
+    }
+
+   
+    .gy-4 {
+        margin: 0px 0px 0px 0px;
+        justify-content: center;
+    }
+
+}
 
 
 @media screen and (min-width: 576px) {
-    .section-header {
-        font-size: 36px; 
+
+    /* 부트스트랩 자체크기 없애는거 */
+    /* .pricing > .container {
+        max-width: none;
+    } */
+
+    .section-header p {
+        font-size: 35px;
+        margin: 0px;
+        text-align: left;
     }
+
+    .container > .section-header {
+        padding: 70px 12px 50px 12px;
+    }
+
     .gy-4 {
-        margin: 0px 0px 0px 0px
+        margin: 0px 0px 0px 0px;
+        justify-content: center;
     }
+
     
-    .col-sm-4 {
-        width: 100%;
-        margin: auto;
-        /* text-align: center; */
-    }
-
-
 }
- 
-@media screen and (min-width: 768px) {
-    .gy-4 {
-        margin: 0px 0px 0px 0px
-    }
 
-    
+
+@media screen and (min-width: 768px) {
+
+  
+    .gy-4 {
+        /* margin: 0px 90px 90px 90px; */
+        /* justify-content: center; */
+    }
 
     .col-sm-4 {
-        width: 50%;
-        margin: auto;
-        display: wrap;
+        width: 328px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
+
+    .container > .section-header {
+        padding: 70px 12px 50px 12px;
+    }
+
+
+    .section-header p {
+        font-size: 38px;
+        margin: 0px;
+        text-align: left;
+    } 
+
 }
   
 
 @media (min-width: 992px) {
+
+
     .col-sm-4 {
-        width: 33.3%;
+        width: 328px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
-   
+
+
+    .gy-4 {
+        margin: 0px 90px 90px 90px;
+        /* justify-content: center; */
+    }
+
+    .container > .section-header {
+        padding: 70px 12px 50px 12px;
+    }
+
 }
   
 @media (min-width: 1200px) {
+
     .col-sm-4 {
-        width: 33.3%;
+        width: 328px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    .gy-4 {
+        margin: 0px 90px 90px 90px;
+        /* justify-content: center; */
+    }
+
+    .container > .section-header {
+        padding: 70px 12px 50px 12px;
     }
     
 }
   
 @media (min-width: 1400px) {
     .col-sm-4 {
-        width: 33.3%;
+        width: 328px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .gy-4 {
+        margin: 0px 90px 90px 90px;
+        justify-content: center;
+    }
+
+    .container > .section-header {
+        padding: 70px 12px 50px 12px;
     }
    
 }
