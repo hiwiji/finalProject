@@ -264,9 +264,9 @@ section {
         margin-right: 24.8px;
     }
     
-    .container > .section-header {
+    /* .container > .section-header {
         padding: 70px 12px 10px 12px;
-    }
+    } */
 
     .col-sm-4 {
         width: 295px;
@@ -289,7 +289,7 @@ section {
     .section-header p {
         font-size: 19px;
         margin: 0px;
-        text-align: left;
+        text-align: center;
     }
 
     .gy-4 {
@@ -308,15 +308,15 @@ section {
         margin-right: 24.8px;
     } */
 
-    .container > .section-header {
+    /* .container > .section-header {
         padding: 70px 12px 10px 12px;
-    }
+    } */
 
     
     .section-header p {
-        font-size: 28px;
+        font-size: 19px;
         margin: 0px;
-        text-align: left;
+        text-align: center;
     }
 
     .col-sm-4 {
@@ -342,14 +342,14 @@ section {
     } */
 
     .section-header p {
-        font-size: 35px;
+        font-size: 19px;
         margin: 0px;
-        text-align: left;
+        text-align: center;
     }
 
-    .container > .section-header {
+    /* .container > .section-header {
         padding: 70px 12px 50px 12px;
-    }
+    } */
 
     .gy-4 {
         margin: 0px 0px 0px 0px;
@@ -375,15 +375,15 @@ section {
         margin-right: 10px;
     }
 
-    .container > .section-header {
+    /* .container > .section-header {
         padding: 70px 12px 50px 12px;
-    }
+    } */
 
 
     .section-header p {
         font-size: 38px;
         margin: 0px;
-        text-align: left;
+        text-align: center;
     } 
 
 }
@@ -404,10 +404,10 @@ section {
         margin: 0px 90px 90px 90px;
         /* justify-content: center; */
     }
-
+/* 
     .container > .section-header {
         padding: 70px 12px 50px 12px;
-    }
+    } */
 
 }
   
@@ -426,9 +426,9 @@ section {
         /* justify-content: center; */
     }
 
-    .container > .section-header {
+    /* .container > .section-header {
         padding: 70px 12px 50px 12px;
-    }
+    } */
     
 }
   
@@ -445,8 +445,8 @@ section {
         justify-content: center;
     }
 
-    .container > .section-header {
+    /* .container > .section-header {
         padding: 70px 12px 50px 12px;
-    }
+    } */
    
 }

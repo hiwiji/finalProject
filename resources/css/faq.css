@@ -186,29 +186,28 @@ section {
 @media screen and (min-width: 320px) {
 
     .email {
-        margin-left: 0px;
+        margin-left: 10px;
+
     }
 
     .contact {
         padding: 0px;
     }
     .textfaq h3 {
-        /* text-align: center; */
+        text-align: left;
         font-size : calc(1.2rem + .6vw);
     }
   
     .textfaq {
-        /* margin-left: 50px; */
         padding-bottom: 50px;
     }
     
     .textfaq h5 {
-        /* text-align: center; */
+        text-align: left;
         font-size: 1.1rem;
     }
     
     .textfaq2 {
-        /* margin-left: 50px; */
         margin-top: 60px;
     }
 

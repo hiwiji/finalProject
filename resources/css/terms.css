@@ -105,15 +105,36 @@ body {
 
 
 
-@media (max-width: 768px) {
-  .features .feture-tabs h3 {
-    font-size: 28px;
-  }
-}
 
 
 @media (max-width: 768px) {
-  .features .feature-icons h3 {
-    font-size: 28px;
-  }
+    
+    .col > ul > li {
+        flex-basis: 100%;
+    }
+
+    .feture-tabs .col {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .tab-pane > pre {
+        margin: 10px;
+        font-size : calc(0.675rem +1.5vw);
+    }
+
+    .features .feture-tabs .nav-pills {
+        border-bottom: none;
+    }
+
+    .features .feture-tabs h3 {
+        font-size: 28px;
+      }
+    
+       .features .feature-icons h3 {
+        font-size: 28px;
+      }
+
 }
+
+
