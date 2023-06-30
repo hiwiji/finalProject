@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메모테스트</title>
+
+    <!-- Fontawesome -->
+	<script src="https://kit.fontawesome.com/881d1deef7.js" crossorigin="anonymous"></script>
+
+    <!-- 헤더, 메모 CSS File -->
+    <link href="/resources/css/createElement테스트.css" rel="stylesheet">
+
+    <!-- jQuery 라이브러리 추가 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <div id="memo-area">
+        <!-- 팀 메모 영역-->
+        <div class="team">
+            <div class="division1">Team Memo</div>
+
+            <div class="division2">
+                <button class="workspaceBtn">+</button>
+                <!-- 팀 메모지 -->
+                <div class="memoDetail workspace" style="display:none;">
+                    <!-- 삭제 -->
+                    <div class="icon">
+                        <i class="fa-solid fa-trash workspaceRemoveBtn"></i>
+                    </div>
+                    <!-- 팀메모 작성 부분 -->
+                    <div class="memoContent" contenteditable="true">
+
+                    </div>
+                    <!-- 메모 글자수 카운트-->
+                    <p><span class="counter"> 0 </span> / 50</p>
+                    <!-- 메모 수정자 정보 -->
+                    <div class="memoInfo">
+                        <div class="modifyInfo">
+                            <div class="memberName">수정자 : 위지은</div> 							
+                            <div class="memoUpdateDate">수정일 : 2023년 6월 29일 </div>
+                        </div>
+                        <!-- 수정자 프로필사진 -->
+                        <div class="profile-image">
+                            <img src="/resources/images/landing/오둥3.jpg">
+                        </div>		    		
+                    </div>			
+                </div>
+            </div>
+        </div>
+
+        <!-- 개인 메모 영역-->
+        <div class="solo">
+            <div class="division1">Personal Memo</div>
+
+            <div class="division2">
+                <button class="personalBtn">+</button>
+                <!-- 개인 메모지 -->
+                <div class="memoDetail personal">
+                    <!-- 삭제 -->
+                    <div class="icon">
+                        <i class="fa-solid fa-trash personalRemoveBtn"></i>
+                    </div>
+                    <!-- 개인메모 작성 부분 -->
+                    <div class="memoContent" contenteditable="true">
+
+                    </div>
+                    <!-- 메모 글자수 카운트-->
+                    <p><span class="counter"> 0 </span> / 50</p>
+                    <!-- 메모 수정자 정보 -->
+                    <div class="memoInfo">
+                        <div class="modifyInfo">
+                            <div class="memberName">수정자 : 위지은</div> 							
+                            <div class="memoUpdateDate">수정일 : 2023년 6월 29일 </div>
+                        </div>
+                        <!-- 수정자 프로필사진 -->
+                        <div class="profile-image">
+                            <img src="/resources/images/landing/오둥3.jpg">
+                        </div>		    		
+                    </div>			
+                </div>
+            </div>
+
+            
+        </div>
+
+        <script src="/resources/js/createElement테스트.js"></script>
+</body>
+</html>
